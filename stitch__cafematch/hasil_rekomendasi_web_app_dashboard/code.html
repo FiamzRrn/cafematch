@@ -1,0 +1,577 @@
+<!DOCTYPE html><html class="h-full" lang="id" style=""><svg class="inline-defs-container" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden"></svg><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{height:100%;margin:0;padding:0;}body{overscroll-behavior:none;}}::-webkit-scrollbar{width:6px;height:6px;}::-webkit-scrollbar-thumb{background:#d1c4c0;border-radius:4px;}::-webkit-scrollbar-track{background:transparent;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"outline-variant":"#d1c4c0","on-surface-variant":"#4e4542","surface-container-lowest":"#ffffff","on-secondary-container":"#772f18","error":"#ba1a1a","tertiary-fixed-dim":"#bbcbbb","tertiary-container":"#111e15","on-background":"#1b1c1a","surface-bright":"#fbf9f5","secondary-container":"#fe997a","on-primary":"#ffffff","on-tertiary-fixed":"#111e15","primary-fixed":"#ede0dc","background":"#fbf9f5","primary-container":"#201a18","surface-variant":"#e4e2de","on-surface":"#1b1c1a","surface-container":"#efeeea","secondary":"#97472e","inverse-on-surface":"#f2f0ed","surface-tint":"#655c5a","on-primary-container":"#8c827e","surface":"#fbf9f5","secondary-fixed":"#ffdbd0","inverse-primary":"#d0c4c0","tertiary":"#000000","on-tertiary-fixed-variant":"#3c4a3e","secondary-fixed-dim":"#ffb59f","on-secondary-fixed":"#3a0a00","on-error":"#ffffff","on-secondary":"#ffffff","on-error-container":"#93000a","tertiary-fixed":"#d6e7d7","surface-container-low":"#f5f3ef","error-container":"#ffdad6","primary-fixed-dim":"#d0c4c0","outline":"#807571","on-tertiary-container":"#78887a","on-primary-fixed-variant":"#4d4542","surface-container-high":"#eae8e4","surface-container-highest":"#e4e2de","primary":"#000000","on-tertiary":"#ffffff","on-secondary-fixed-variant":"#793019","surface-dim":"#dbdad6","on-primary-fixed":"#201a18","inverse-surface":"#30312e"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin":"3rem","gutter":"1.5rem","space-md":"1rem","space-xs":"0.25rem","margin-mobile":"1.25rem","space-sm":"0.5rem","space-xl":"2.5rem","space-lg":"1.5rem","gutter-sm":"1rem"},"fontFamily":{"label-sm":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"headline-lg-mobile":["Playfair Display"],"headline-sm":["Playfair Display"],"headline-lg":["Playfair Display"],"body-lg":["Plus Jakarta Sans"],"display-hero":["Playfair Display"],"display-hero-mobile":["Playfair Display"],"label-caps":["Plus Jakarta Sans"],"headline-md":["Playfair Display"],"body-md":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"]}}}};</script></head>
+<body class="h-full bg-background text-on-surface font-body-md antialiased flex overflow-hidden">
+<!-- 1. Persistent Left Navigation Sidebar (Consistent Dark Espresso Aesthetic) -->
+<aside class="w-64 xl:w-72 h-full shrink-0 z-40 bg-[#1a1412] text-[#fbf9f5] flex flex-col justify-between p-5 border-r border-[#2d221e] overflow-y-auto">
+<div class="space-y-7">
+<!-- Brand Header -->
+<a class="flex items-center gap-3.5 group px-1" href="#">
+<div class="w-10 h-10 rounded-xl bg-secondary flex items-center justify-center text-on-secondary shadow-md shrink-0 ring-2 ring-secondary/30">
+<svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+<path d="M2,19H20V21H2V19M4,3H18A1,1 0 0,1 19,4V8A4,4 0 0,1 15,12H13V15.5C13,16.33 12.33,17 11.5,17H6.5C5.67,17 5,16.33 5,15.5V5H4V3M15,5H7V15H11.5V10H15A2,2 0 0,0 17,8V5H15M19,5V8A2,2 0 0,0 21,10H22A1,1 0 0,0 23,9V5A1,1 0 0,0 22,4H19V5Z"></path>
+</svg>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-[20px] text-white tracking-tight font-bold leading-tight">CafeMatch</span>
+<span class="text-[9px] text-[#ffb59f] font-label-caps uppercase tracking-wider font-semibold mt-0.5">CURATED COFFEE ENGINE</span>
+</div>
+</a>
+<!-- Vertical Navigation Menu -->
+<nav class="space-y-1.5">
+<!-- Temukan Selera -->
+<a class="flex items-center justify-between px-3.5 py-2.5 rounded-xl font-label-md text-xs text-[#c7beba] hover:text-white hover:bg-white/5 transition-all" data-path="temukan-selera" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[19px] text-[#a49995]">tune</span>
+<span class="font-medium">Temukan Selera</span>
+</div>
+</a>
+<!-- Hasil Rekomendasi (Active State) -->
+<a aria-current="page" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl font-label-md text-xs bg-secondary text-white font-semibold shadow-sm transition-all" data-path="hasil-rekomendasi" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[19px]">coffee</span>
+<span class="">Hasil Rekomendasi</span>
+</div>
+<span class="inline-flex items-center justify-center px-2 py-0.5 rounded-full bg-white/20 text-white font-label-caps text-[9px] font-bold tracking-wide">4 Kedai</span>
+</a>
+<!-- Favorit Saya -->
+<a class="flex items-center justify-between px-3.5 py-2.5 rounded-xl font-label-md text-xs text-[#c7beba] hover:text-white hover:bg-white/5 transition-all" data-path="favorit-saya" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[19px] text-[#a49995]">favorite</span>
+<span class="font-medium">Favorit Saya</span>
+</div>
+<span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-white/10 text-[#d0c4c0] font-label-caps text-[10px] font-bold">3</span>
+</a>
+<!-- Detail Kedai -->
+
+<!-- Logika Pakar -->
+<a class="flex items-center justify-between px-3.5 py-2.5 rounded-xl font-label-md text-xs text-[#c7beba] hover:text-white hover:bg-white/5 transition-all" data-path="tentang-logika-pakar" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[19px] text-[#a49995]">psychology</span>
+<span class="font-medium">Logika Pakar</span>
+</div>
+</a>
+</nav>
+</div>
+<!-- Bottom Sidebar Profile & Meta Info -->
+<div class="pt-5 border-t border-[#2e231f] space-y-3.5">
+<!-- Location Picker Widget -->
+<div class="flex items-center justify-between px-3 py-2 rounded-xl bg-[#231b18] border border-[#3b2e29]">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-[17px] text-[#fe997a] shrink-0">location_on</span>
+<span class="font-label-sm text-xs text-white font-medium truncate">Senopati, Jaksel</span>
+</div>
+<button class="font-label-caps text-[10px] text-[#fe997a] hover:text-[#ffb59f] cursor-pointer font-bold uppercase shrink-0 transition-colors" type="button">Ubah</button>
+</div>
+<!-- Engine Status Badge -->
+<div class="flex items-center justify-between px-2 text-[10.5px] text-[#a49995]">
+<div class="flex items-center gap-2">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+</span>
+<span class="font-medium text-[#dcd4d0]">SCA Engine v2.4 • Online</span>
+</div>
+</div>
+<!-- User Profile Info -->
+<div class="flex items-center justify-between px-2 pt-1.5 border-t border-[#2a201c]">
+<div class="flex items-center gap-2.5 min-w-0">
+<img alt="Aditya S." class="w-8 h-8 rounded-full object-cover ring-1 ring-white/20 shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCexAJ6KuWAczyKTGH5JpuP8E3vwVJckzeNCEm3IyhSRmiLRRjKe2o2kiaVDoSipJ5FwebXxJ3mLylOiqR5wxjhqgy6l6MEW5W5jiYRIoGyz_Hiq7DN3NUAiD-pRN4dg3kstq86jvuTdxJQiVN_zv4zPhbULcvji1pE4yiyMBWioehTHTi4WxLrh7sjr0DuW1JHv1TOj5xHwGPgPJhOaX4nbp8t7nHMF7qcIcyk3Xku">
+<div class="flex flex-col text-left min-w-0">
+<span class="font-label-sm text-xs font-semibold text-white leading-tight truncate">Aditya S.</span>
+<span class="text-[10px] text-[#a49995] leading-none truncate">Q-Grader Enthusiast</span>
+</div>
+</div>
+<button aria-label="Pengaturan Akun" class="p-1.5 rounded-lg text-[#a49995] hover:text-white hover:bg-white/5 transition-colors shrink-0">
+<span class="material-symbols-outlined text-[17px]">settings</span>
+</button>
+</div>
+</div>
+</aside>
+<!-- 2. Master-Detail Split Screen Layout in Main Content Area -->
+<main class="flex-1 flex flex-col lg:flex-row overflow-hidden w-full relative">
+<!-- LEFT PANE: Results Feed (scrollable, ~55% width) -->
+<section class="w-full lg:w-[56%] xl:w-[54%] h-full overflow-y-auto flex flex-col bg-background border-r border-surface-container-high">
+<!-- Header Title & Filter Control Toolbar (Sticky Top) -->
+<div class="sticky top-0 z-20 bg-background/95 backdrop-blur-md border-b border-surface-container-high px-5 sm:px-7 pt-5 pb-3.5 space-y-3">
+<!-- Title & Subtitle Area -->
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
+<div>
+<div class="flex items-center gap-2.5">
+<h1 class="font-headline-md text-[24px] sm:text-[26px] text-primary font-bold tracking-tight">Hasil Rekomendasi Berperingkat</h1>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-bold bg-secondary-fixed text-on-secondary-fixed shrink-0">4 Kedai</span>
+</div>
+<p class="text-xs text-on-surface-variant mt-1 leading-normal">Daftar kedai kopi terkurasi berdasarkan metode seduh, profil sangrai, dan radius terdekat.</p>
+</div>
+<!-- Controls (Sort & Edit Criteria) -->
+<div class="flex items-center gap-2 self-start shrink-0">
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-outline-variant/70 bg-surface-container-lowest hover:bg-surface-container text-xs font-label-md text-on-surface transition-colors shadow-2xs font-medium" type="button">
+<span class="material-symbols-outlined text-[15px] text-secondary">tune</span>
+<span class="">Sesuaikan Kriteria</span>
+</button>
+<div class="relative inline-block text-left">
+<select class="appearance-none bg-surface-container-lowest border border-outline-variant/70 text-xs font-label-md rounded-lg pl-3 pr-7 py-1.5 text-on-surface hover:bg-surface-container cursor-pointer focus:outline-none focus:ring-1 focus:ring-secondary font-medium">
+<option>Paling Cocok (% Selera)</option>
+<option>Jarak Terdekat</option>
+<option>Rating Tertinggi</option>
+</select>
+<span class="material-symbols-outlined absolute right-1.5 top-1/2 -translate-y-1/2 pointer-events-none text-[16px] text-on-surface-variant">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Active Criteria Pills Toolbar -->
+<div class="flex items-center gap-1.5 overflow-x-auto pb-0.5 text-xs">
+<span class="text-on-surface-variant text-[11px] font-label-caps uppercase tracking-wider shrink-0 mr-1">Filter:</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface border border-outline-variant/40 shrink-0 text-xs font-medium">
+          ☕ V60 &amp; Espresso
+        </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface border border-outline-variant/40 shrink-0 text-xs font-medium">
+          💻 Cocok untuk Kerja
+        </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface border border-outline-variant/40 shrink-0 text-xs font-medium">
+          📍 Radius ≤ 3 km
+        </span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-semibold border border-secondary-container/60 shrink-0 text-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+          Buka Sekarang
+        </span>
+</div>
+</div>
+<!-- Recommendations Feed Cards -->
+<div class="p-5 sm:p-7 space-y-4">
+<!-- CARD 1 (#1 • 96% Cocok — Kroma Atelier & Roastery) -->
+<article class="bg-surface-container-lowest rounded-xl border-2 border-secondary shadow-sm hover:shadow-md transition-all relative group">
+<div class="p-4 sm:p-5 flex flex-col sm:flex-row gap-4 sm:gap-5">
+<div class="relative w-full sm:w-44 h-38 sm:h-auto rounded-lg overflow-hidden shrink-0 bg-surface-container">
+<img alt="Kroma Atelier &amp; Roastery" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD46f3MzuZpN1HBqOKNrvZS7rpDQK_p0CRCZUk0RrTTksCUqptqA6yvp1PeEGCb-nrCLT5neU_OVnQ2XyzQA7N04HaFyMe7THKkAb8HzrIsjbB79CGcH8Q-z5O3cb-wwZbM-uKwYB2lzS_avN_zQbGFz4RWZYUB4-76oeza4lygohMM4YmUenjOJff_oIQmAbX-s-_FE6vjOAaYXn6RPNOMxhOLf8-ruRNDaT15ECu4">
+<div class="absolute top-2 left-2 flex items-center gap-1.5">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md bg-secondary text-on-secondary text-[11px] font-bold shadow-sm">
+<span class="material-symbols-outlined text-[13px]">verified</span> #1 • 96% Cocok
+              </span>
+</div>
+</div>
+<div class="flex-1 flex flex-col justify-between min-w-0">
+<div>
+<div class="flex items-start justify-between gap-2">
+<div class="min-w-0">
+<div class="flex items-center gap-1.5 text-xs text-secondary font-semibold">
+<span class="">Jl. Cikajang No. 24, Petogogan</span>
+<span class="">•</span>
+<span class="text-on-surface-variant font-medium">800 m</span>
+</div>
+<h2 class="font-headline-sm text-[18px] text-primary font-bold mt-0.5">Kroma Atelier &amp; Roastery</h2>
+<div class="flex items-center flex-wrap gap-2 mt-1.5 text-xs text-on-surface-variant">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-600/10 text-emerald-700 font-semibold text-[11px] shrink-0">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+                      Buka • 08:00 - 22:00
+                    </span>
+</div>
+</div>
+<button aria-label="Favorit Tersimpan" class="p-2 rounded-lg bg-secondary-fixed text-on-secondary-fixed hover:bg-secondary hover:text-on-secondary transition-colors shrink-0" title="Tersimpan di Favorit">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: &quot;FILL&quot; 1;">favorite</span>
+</button>
+</div>
+<p class="mt-2 text-xs text-on-surface-variant leading-relaxed">
+<span class="font-semibold text-secondary">Catatan Pakar:</span> Menyajikan V60 &amp; Espresso origin unggulan, suasana tenang hening, jarak 800 m.
+              </p>
+<div class="flex flex-wrap gap-1.5 mt-2.5">
+<span class="px-2 py-0.5 rounded-md bg-surface-container text-[11px] text-on-surface font-medium">V60</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container text-[11px] text-on-surface font-medium">Aeropress</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container text-[11px] text-on-surface font-medium">Cocok untuk Kerja</span>
+</div>
+</div>
+<div class="pt-3 mt-3 border-t border-surface-container flex items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<a class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary text-on-primary hover:bg-primary/90 text-xs font-semibold shadow-2xs transition-colors" href="https://maps.google.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[15px]">directions</span>
+<span class="">Buka Peta</span>
+</a>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-xs font-semibold text-on-surface transition-colors" type="button">Detail Profil</button>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-low px-2 py-1 rounded-lg border border-surface-container">
+<button aria-label="Jempol Atas" class="p-1 rounded hover:text-secondary text-secondary font-bold transition-colors">
+<span class="material-symbols-outlined text-[16px]">thumb_up</span>
+</button>
+<button aria-label="Jempol Bawah" class="p-1 rounded hover:text-secondary text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[16px]">thumb_down</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- CARD 2 (#2 • 88% Cocok — Tanatap Artisan Coffee Space) -->
+<article class="bg-surface-container-lowest rounded-xl border border-outline-variant/60 shadow-2xs hover:shadow-md transition-all relative group">
+<div class="p-4 sm:p-5 flex flex-col sm:flex-row gap-4 sm:gap-5">
+<div class="relative w-full sm:w-44 h-38 sm:h-auto rounded-lg overflow-hidden shrink-0 bg-surface-container">
+<img alt="Tanatap Artisan Coffee Space" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBInjGBmqDgKVD7sR2RtLGa9jRVCP7SHO45W0mv7fwVQRQAydOjFVS60f6B_iDZbyB0QkBDPFSx18BZnb9xunuLFCN_wu3fP9n7Q0gVCw5PNHOShKJVl0bmWresuVqOjvJvCgX38dRBpO2XU5DnJ2Mjp__kSSnFNkJAzXg70NyEMyk4mrDL_k9-vIiE1xbYhcsowvIGqvmJEfpW2cWuKh2lw6jx039IgFn1rYj2-ZF4">
+<div class="absolute top-2 left-2 flex items-center gap-1.5">
+<span class="inline-flex items-center px-2 py-0.5 rounded-md bg-surface-container-highest/95 backdrop-blur-xs text-on-surface text-[11px] font-bold shadow-sm">
+                #2 • 88% Cocok
+              </span>
+</div>
+</div>
+<div class="flex-1 flex flex-col justify-between min-w-0">
+<div>
+<div class="flex items-start justify-between gap-2">
+<div class="min-w-0">
+<div class="flex items-center gap-1.5 text-xs text-secondary font-semibold">
+<span class="">Jl. Kyai Maja No. 39</span>
+<span class="">•</span>
+<span class="text-on-surface-variant font-medium">1.4 km</span>
+</div>
+<h3 class="font-headline-sm text-[18px] text-primary font-bold mt-0.5">Tanatap Artisan Coffee Space</h3>
+<div class="flex items-center flex-wrap gap-2 mt-1.5 text-xs text-on-surface-variant">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-600/10 text-emerald-700 font-semibold text-[11px] shrink-0">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+                      Buka • 24 Jam
+                    </span>
+</div>
+</div>
+<button aria-label="Tambah ke Favorit" class="p-2 rounded-lg bg-surface-container hover:bg-secondary-fixed text-on-surface-variant hover:text-on-secondary-fixed transition-colors shrink-0" title="Simpan ke Favorit">
+<span class="material-symbols-outlined text-[20px]">favorite_border</span>
+</button>
+</div>
+<p class="mt-2 text-xs text-on-surface-variant leading-relaxed">
+<span class="font-semibold text-secondary">Catatan Pakar:</span> Spesialis V60 &amp; pour-over, area outdoor rindang dengan colokan lengkap.
+              </p>
+<div class="flex flex-wrap gap-1.5 mt-2.5">
+<span class="px-2 py-0.5 rounded-md bg-surface-container text-[11px] text-on-surface font-medium">V60</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container text-[11px] text-on-surface font-medium">Pour-Over</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container text-[11px] text-on-surface font-medium">Biophilic Space</span>
+</div>
+</div>
+<div class="pt-3 mt-3 border-t border-surface-container flex items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<a class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary text-on-primary hover:bg-primary/90 text-xs font-semibold shadow-2xs transition-colors" href="https://maps.google.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[15px]">directions</span>
+<span class="">Buka Peta</span>
+</a>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-xs font-semibold text-on-surface transition-colors" type="button">Detail Profil</button>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-low px-2 py-1 rounded-lg border border-surface-container">
+<button aria-label="Jempol Atas" class="p-1 rounded hover:text-secondary text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[16px]">thumb_up</span>
+</button>
+<button aria-label="Jempol Bawah" class="p-1 rounded hover:text-secondary text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[16px]">thumb_down</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- CARD 3 (#3 • 82% Cocok — Giyanti Coffee Roastery) -->
+<article class="bg-surface-container-lowest rounded-xl border border-outline-variant/60 shadow-2xs hover:shadow-md transition-all relative group">
+<div class="p-4 sm:p-5 flex flex-col sm:flex-row gap-4 sm:gap-5">
+<div class="relative w-full sm:w-44 h-38 sm:h-auto rounded-lg overflow-hidden shrink-0 bg-surface-container">
+<img alt="Giyanti Coffee Roastery" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQNJXgbcp7LOWoxaoudeYNdtpyyTk4JwMpFhsWMkrUM5rYbEQdtFKXAW6B_2Bja4xflJgXZ5kBxAz4YCbHcqYdNChd7RwIv1HHeIJ-XlthB7o94FS0ma7Z345EQZUXmRgMedoxTaeX9uHgeQq6imouNPVX8_18Klcrk1n_xDAatStOvVzVf_jAqYnOcGsFLu4S0Oc_lvKpFSB7pglU6qPuHNEysgbFta47-IjwY66h">
+<div class="absolute top-2 left-2 flex items-center gap-1.5">
+<span class="inline-flex items-center px-2 py-0.5 rounded-md bg-surface-container-highest/95 backdrop-blur-xs text-on-surface text-[11px] font-bold shadow-sm">
+                #3 • 82% Cocok
+              </span>
+</div>
+</div>
+<div class="flex-1 flex flex-col justify-between min-w-0">
+<div>
+<div class="flex items-start justify-between gap-2">
+<div class="min-w-0">
+<div class="flex items-center gap-1.5 text-xs text-secondary font-semibold">
+<span class="">Jl. Surabaya No. 20</span>
+<span class="">•</span>
+<span class="text-on-surface-variant font-medium">2.1 km</span>
+</div>
+<h3 class="font-headline-sm text-[18px] text-primary font-bold mt-0.5">Giyanti Coffee Roastery</h3>
+<div class="flex items-center flex-wrap gap-2 mt-1.5 text-xs text-on-surface-variant">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-600/10 text-emerald-700 font-semibold text-[11px] shrink-0">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+                      Buka • 08:30 - 17:30
+                    </span>
+</div>
+</div>
+<button aria-label="Tambah ke Favorit" class="p-2 rounded-lg bg-surface-container hover:bg-secondary-fixed text-on-surface-variant hover:text-on-secondary-fixed transition-colors shrink-0" title="Simpan ke Favorit">
+<span class="material-symbols-outlined text-[20px]">favorite_border</span>
+</button>
+</div>
+<p class="mt-2 text-xs text-on-surface-variant leading-relaxed">
+<span class="font-semibold text-secondary">Catatan Pakar:</span> Peralatan espresso &amp; roastery profesional, cocok untuk penikmat manual brew.
+              </p>
+<div class="flex flex-wrap gap-1.5 mt-2.5">
+<span class="px-2 py-0.5 rounded-md bg-surface-container text-[11px] text-on-surface font-medium">Espresso</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container text-[11px] text-on-surface font-medium">Cold Brew</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container text-[11px] text-on-surface font-medium">In-House Roastery</span>
+</div>
+</div>
+<div class="pt-3 mt-3 border-t border-surface-container flex items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<a class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary text-on-primary hover:bg-primary/90 text-xs font-semibold shadow-2xs transition-colors" href="https://maps.google.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[15px]">directions</span>
+<span class="">Buka Peta</span>
+</a>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-xs font-semibold text-on-surface transition-colors" type="button">Detail Profil</button>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-low px-2 py-1 rounded-lg border border-surface-container">
+<button aria-label="Jempol Atas" class="p-1 rounded hover:text-secondary text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[16px]">thumb_up</span>
+</button>
+<button aria-label="Jempol Bawah" class="p-1 rounded hover:text-secondary text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[16px]">thumb_down</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- CARD 4 (#4 • 75% Cocok — Ombe Kofie Cikajang) -->
+<article class="bg-surface-container-lowest rounded-xl border border-outline-variant/60 shadow-2xs hover:shadow-md transition-all relative group">
+<div class="p-4 sm:p-5 flex flex-col sm:flex-row gap-4 sm:gap-5">
+<div class="relative w-full sm:w-44 h-38 sm:h-auto rounded-lg overflow-hidden shrink-0 bg-surface-container">
+<img alt="Ombe Kofie Cikajang" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvDDGo-N5mP80-9SBnZ8bTx3SF72ddu6lIP0jo5Us88-X2yDWcloSyoeEMO10dwGIPK2qoAVqVxWqHhpcJ5ps_ffIfXnlSfKGdPJ4LFcXUSZF7WhQaXK9BhCAYr6xTTXM1ieZZD_pwZynah8w05LzVllmCYzrEgmOzXbdLpHPPjvBUYudP1Ppo_40OsGjjxcA0tNAAazQVaHJcIt8MJfR4B1VxTiV4nX9S0B973DnJ">
+<div class="absolute top-2 left-2 flex items-center gap-1.5">
+<span class="inline-flex items-center px-2 py-0.5 rounded-md bg-surface-container-highest/95 backdrop-blur-xs text-on-surface text-[11px] font-bold shadow-sm">
+                #4 • 75% Cocok
+              </span>
+</div>
+</div>
+<div class="flex-1 flex flex-col justify-between min-w-0">
+<div>
+<div class="flex items-start justify-between gap-2">
+<div class="min-w-0">
+<div class="flex items-center gap-1.5 text-xs text-secondary font-semibold">
+<span class="">Jl. Cikajang</span>
+<span class="">•</span>
+<span class="text-on-surface-variant font-medium">2.7 km</span>
+</div>
+<h3 class="font-headline-sm text-[18px] text-primary font-bold mt-0.5">Ombe Kofie Cikajang</h3>
+<div class="flex items-center flex-wrap gap-2 mt-1.5 text-xs text-on-surface-variant">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-600/10 text-emerald-700 font-semibold text-[11px] shrink-0">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+                      Buka • 08:00 - 20:00
+                    </span>
+</div>
+</div>
+<button aria-label="Tambah ke Favorit" class="p-2 rounded-lg bg-surface-container hover:bg-secondary-fixed text-on-surface-variant hover:text-on-secondary-fixed transition-colors shrink-0" title="Simpan ke Favorit">
+<span class="material-symbols-outlined text-[20px]">favorite_border</span>
+</button>
+</div>
+<p class="mt-2 text-xs text-on-surface-variant leading-relaxed">
+<span class="font-semibold text-secondary">Catatan Pakar:</span> Karakter espresso bold dan racikan cold brew khas yang pekat dan mantap.
+              </p>
+<div class="flex flex-wrap gap-1.5 mt-2.5">
+<span class="px-2 py-0.5 rounded-md bg-surface-container text-[11px] text-on-surface font-medium">Espresso</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container text-[11px] text-on-surface font-medium">Cold Brew</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container text-[11px] text-on-surface font-medium">Intimate</span>
+</div>
+</div>
+<div class="pt-3 mt-3 border-t border-surface-container flex items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<a class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary text-on-primary hover:bg-primary/90 text-xs font-semibold shadow-2xs transition-colors" href="https://maps.google.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[15px]">directions</span>
+<span class="">Buka Peta</span>
+</a>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-xs font-semibold text-on-surface transition-colors" type="button">Detail Profil</button>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-low px-2 py-1 rounded-lg border border-surface-container">
+<button aria-label="Jempol Atas" class="p-1 rounded hover:text-secondary text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[16px]">thumb_up</span>
+</button>
+<button aria-label="Jempol Bawah" class="p-1 rounded hover:text-secondary text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[16px]">thumb_down</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Bottom Micro Note -->
+<div class="pt-4 pb-6 text-center text-xs text-on-surface-variant flex flex-col items-center gap-1"><span class="font-label-caps text-[11px] text-secondary uppercase tracking-widest font-semibold block">CAFEMATCH ALGORITHM • SCA CERTIFIED</span><p class="text-outline text-xs mt-1 leading-normal max-w-md">Rekomendasi disesuaikan secara real-time berdasarkan preferensi rasa dan lokasi Anda.</p></div>
+</div>
+</section>
+<!-- RIGHT PANE: Interactive App Map & Live Geodata (Sticky / Fixed, ~45% width) -->
+<section class="hidden lg:flex w-[44%] xl:w-[46%] h-full relative flex-col bg-surface-container-low overflow-hidden">
+<!-- Modern SVG Interactive Vector Map Container -->
+<div class="relative w-full h-full bg-[#f3efe8] overflow-hidden select-none">
+<svg class="w-full h-full object-cover" viewBox="0 0 800 900" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<radialGradient cx="50%" cy="50%" id="radiusGradient" r="50%">
+<stop offset="0%" stop-color="#97472e" stop-opacity="0.08"></stop>
+<stop offset="70%" stop-color="#97472e" stop-opacity="0.03"></stop>
+<stop offset="100%" stop-color="#97472e" stop-opacity="0.16"></stop>
+</radialGradient>
+<filter height="140%" id="shadow" width="140%" x="-20%" y="-20%">
+<feDropShadow dx="0" dy="4" flood-opacity="0.22" stdDeviation="4"></feDropShadow>
+</filter>
+</defs>
+<rect fill="#f4efe8" height="900" width="800"></rect>
+<!-- City Block Polygons -->
+<path d="M40,50 L280,30 L260,220 L20,200 Z" fill="#eee7dc"></path>
+<path d="M310,20 L680,10 L670,180 L300,190 Z" fill="#e9e2d6"></path>
+<path d="M50,230 L260,250 L240,460 L30,440 Z" fill="#eae3d7"></path>
+<path d="M300,220 L580,210 L590,420 L290,440 Z" fill="#ebe4d9"></path>
+<path d="M620,200 L780,190 L790,410 L620,415 Z" fill="#ece5da"></path>
+<path d="M40,490 L260,490 L250,710 L30,690 Z" fill="#eee7dc"></path>
+<path d="M290,470 L560,450 L570,720 L280,710 Z" fill="#ece4d8"></path>
+<path d="M600,450 L770,440 L760,730 L590,730 Z" fill="#eae3d7"></path>
+<path d="M40,730 L380,740 L370,880 L30,880 Z" fill="#e9e1d5"></path>
+<path d="M420,740 L760,750 L750,880 L410,880 Z" fill="#ece4d8"></path>
+<!-- Green Spaces / Parks -->
+<path d="M480,240 C520,230 550,260 560,310 C540,350 490,360 460,330 C440,290 460,250 480,240 Z" fill="#d9e6d5" opacity="0.85"></path>
+<path d="M120,530 C160,510 200,540 210,600 C180,630 130,620 110,580 Z" fill="#d9e6d5" opacity="0.75"></path>
+<text fill="#58705a" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" font-weight="600" opacity="0.85" x="488" y="300">Taman Senopati</text>
+<!-- Secondary Roads -->
+<g stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="7">
+<path d="M0,110 L800,90"></path>
+<path d="M0,320 L800,310"></path>
+<path d="M0,560 L800,580"></path>
+<path d="M0,770 L800,790"></path>
+<path d="M140,0 L120,900"></path>
+<path d="M410,0 L390,900"></path>
+<path d="M640,0 L660,900"></path>
+<path d="M260,100 L420,480 L620,760"></path>
+</g>
+<!-- Primary Arterial Roads -->
+<path d="M-20,410 C180,410 320,380 480,440 C620,490 720,450 820,430" fill="none" stroke="#fed8cb" stroke-linecap="round" stroke-width="12"></path>
+<path d="M-20,410 C180,410 320,380 480,440 C620,490 720,450 820,430" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-width="8"></path>
+<path d="M370,-20 C380,240 400,420 370,640 C350,780 340,920 340,920" fill="none" stroke="#fed8cb" stroke-linecap="round" stroke-width="12"></path>
+<path d="M370,-20 C380,240 400,420 370,640 C350,780 340,920 340,920" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-width="8"></path>
+<!-- Road Labels -->
+<text fill="#786f6c" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="600" letter-spacing="1" x="180" y="400">JL. SENOPATI RAYA</text>
+<text fill="#786f6c" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="600" letter-spacing="1" x="490" y="475">JL. SURYO</text>
+<text fill="#786f6c" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="600" letter-spacing="0.5" transform="rotate(85,385,680)" x="385" y="680">JL. CIKAJANG</text>
+<!-- 3 km Radius Circle Ring -->
+<circle cx="380" cy="420" fill="url(#radiusGradient)" opacity="0.85" r="280" stroke="#97472e" stroke-dasharray="5,5" stroke-width="1.75"></circle>
+<!-- Radius Label Tag -->
+<rect fill="#ffffff" height="20" rx="10" stroke="#d1c4c0" stroke-width="1" width="108" x="326" y="130"></rect>
+<text fill="#97472e" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700" text-anchor="middle" x="380" y="144">Radius ≤ 3.0 KM</text>
+<!-- User Center Radar Marker ("Lokasi Anda") -->
+<g transform="translate(380, 420)">
+<circle cx="0" cy="0" fill="#97472e" opacity="0.15" r="26">
+<animate attributeName="r" dur="3s" repeatCount="indefinite" values="10;36;10"></animate>
+<animate attributeName="opacity" dur="3s" repeatCount="indefinite" values="0.3;0;0.3"></animate>
+</circle>
+<circle cx="0" cy="0" fill="#97472e" opacity="0.25" r="14"></circle>
+<circle cx="0" cy="0" fill="#97472e" r="7"></circle>
+<circle cx="0" cy="0" fill="#ffffff" r="3.5"></circle>
+<rect fill="#1a1412" filter="url(#shadow)" height="22" rx="5" width="100" x="-50" y="-38"></rect>
+<text fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="600" text-anchor="middle" x="0" y="-24">Lokasi Anda</text>
+<polygon fill="#1a1412" points="-5,-16 5,-16 0,-11"></polygon>
+</g>
+<!-- PIN #1: Kroma (96%) -->
+<g class="cursor-pointer group" filter="url(#shadow)" transform="translate(450, 360)">
+<rect fill="#97472e" height="28" rx="14" stroke="#ffffff" stroke-width="2" width="100" x="-50" y="-54"></rect>
+<circle cx="-32" cy="-40" fill="#ffffff" r="8.5"></circle>
+<text fill="#97472e" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" font-weight="800" text-anchor="middle" x="-32" y="-36">1</text>
+<text fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" text-anchor="middle" x="12" y="-36">96% Kroma</text>
+<polygon fill="#97472e" points="-6,-26 6,-26 0,-18"></polygon>
+<circle cx="0" cy="-17" fill="#ffffff" r="3" stroke="#97472e" stroke-width="1.5"></circle>
+</g>
+<!-- PIN #2: Tanatap (88%) -->
+<g class="cursor-pointer group" filter="url(#shadow)" transform="translate(250, 480)">
+<rect fill="#ffffff" height="26" rx="13" stroke="#97472e" stroke-width="1.5" width="94" x="-47" y="-50"></rect>
+<circle cx="-31" cy="-37" fill="#97472e" r="8"></circle>
+<text fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="800" text-anchor="middle" x="-31" y="-33.5">2</text>
+<text fill="#1b1c1a" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" x="11" y="-33.5">88% Tanatap</text>
+<polygon fill="#97472e" points="-5,-24 5,-24 0,-18"></polygon>
+<circle cx="0" cy="-17" fill="#97472e" r="2.5"></circle>
+</g>
+<!-- PIN #3: Giyanti (82%) -->
+<g class="cursor-pointer group" filter="url(#shadow)" transform="translate(520, 210)">
+<rect fill="#ffffff" height="26" rx="13" stroke="#807571" stroke-width="1.5" width="90" x="-45" y="-50"></rect>
+<circle cx="-30" cy="-37" fill="#807571" r="8"></circle>
+<text fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="800" text-anchor="middle" x="-30" y="-33.5">3</text>
+<text fill="#1b1c1a" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" x="10" y="-33.5">82% Giyanti</text>
+<polygon fill="#807571" points="-5,-24 5,-24 0,-18"></polygon>
+<circle cx="0" cy="-17" fill="#807571" r="2.5"></circle>
+</g>
+<!-- PIN #4: Ombe (75%) -->
+<g class="cursor-pointer group" filter="url(#shadow)" transform="translate(390, 580)">
+<rect fill="#ffffff" height="26" rx="13" stroke="#807571" stroke-width="1.5" width="86" x="-43" y="-50"></rect>
+<circle cx="-28" cy="-37" fill="#807571" r="8"></circle>
+<text fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="800" text-anchor="middle" x="-28" y="-33.5">4</text>
+<text fill="#1b1c1a" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" font-weight="700" text-anchor="middle" x="10" y="-33.5">75% Ombe</text>
+<polygon fill="#807571" points="-5,-24 5,-24 0,-18"></polygon>
+<circle cx="0" cy="-17" fill="#807571" r="2.5"></circle>
+</g>
+</svg>
+<!-- Map Floating Navigation Tools (Zoom & Layers) -->
+<div class="absolute top-4 right-4 flex flex-col gap-2 z-10">
+<div class="flex flex-col bg-surface/95 backdrop-blur-md rounded-xl shadow-md border border-outline-variant/40 overflow-hidden">
+<button aria-label="Perbesar Peta" class="p-2.5 hover:bg-surface-container text-on-surface transition-colors border-b border-surface-container" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+<button aria-label="Perkecil Peta" class="p-2.5 hover:bg-surface-container text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+</div>
+<button aria-label="Reset Posisi Lokasi" class="p-2.5 bg-surface/95 backdrop-blur-md rounded-xl shadow-md border border-outline-variant/40 text-secondary hover:bg-surface-container transition-colors" title="Pusatkan ke lokasi saya" type="button">
+<span class="material-symbols-outlined text-[18px]">my_location</span>
+</button>
+<button aria-label="Layer Peta" class="p-2.5 bg-surface/95 backdrop-blur-md rounded-xl shadow-md border border-outline-variant/40 text-on-surface-variant hover:bg-surface-container transition-colors" title="Layer Satelit/Peta" type="button">
+<span class="material-symbols-outlined text-[18px]">layers</span>
+</button>
+</div>
+<!-- Bottom Map Radar Info Card -->
+<div class="absolute bottom-5 inset-x-5 z-10">
+<div class="bg-surface/95 backdrop-blur-md rounded-xl p-4 shadow-lg border border-outline-variant/50 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[19px]">near_me</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-xs font-bold text-primary">Radius 3.0 km • 4 Kedai Memenuhi Syarat Pakar</span>
+</div>
+<p class="text-[11px] text-on-surface-variant mt-0.5">Dalam jangkauan &lt; 10 menit dari Senopati</p>
+</div>
+</div>
+<div class="flex items-center gap-2 self-end sm:self-center shrink-0">
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-secondary text-white hover:bg-secondary/90 text-xs font-label-md font-semibold transition-all shadow-2xs active:scale-95" type="button">
+<span class="material-symbols-outlined text-[14px]">add_circle</span>
+<span class="">+ Perluas Radius (+2 km)</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Like/Dislike Toggle
+    const feedbackButtons = document.querySelectorAll('button[aria-label="Jempol Atas"], button[aria-label="Jempol Bawah"]');
+    feedbackButtons.forEach(btn => {
+      btn.addEventListener('click', function() {
+        const parent = this.closest('div');
+        const siblings = parent.querySelectorAll('button');
+        siblings.forEach(b => {
+          b.classList.remove('text-secondary', 'font-bold');
+          b.classList.add('text-on-surface-variant');
+        });
+        this.classList.remove('text-on-surface-variant');
+        this.classList.add('text-secondary', 'font-bold');
+      });
+    });
+
+    // Favorite Toggle
+    const favButtons = document.querySelectorAll('button[title*="Favorit"]');
+    favButtons.forEach(btn => {
+      btn.addEventListener('click', function() {
+        const icon = this.querySelector('.material-symbols-outlined');
+        if (icon) {
+          if (icon.textContent.trim() === 'favorite') {
+            icon.textContent = 'favorite_border';
+            icon.style.fontVariationSettings = "'FILL' 0";
+            this.classList.remove('bg-secondary-fixed', 'text-on-secondary-fixed');
+            this.classList.add('bg-surface-container', 'text-on-surface-variant');
+          } else {
+            icon.textContent = 'favorite';
+            icon.style.fontVariationSettings = "'FILL' 1";
+            this.classList.add('bg-secondary-fixed', 'text-on-secondary-fixed');
+            this.classList.remove('bg-surface-container', 'text-on-surface-variant');
+          }
+        }
+      });
+    });
+  });
+</script>
+
+
+</body></html>

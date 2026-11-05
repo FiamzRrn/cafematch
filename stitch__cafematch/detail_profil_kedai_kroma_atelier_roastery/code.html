@@ -1,0 +1,530 @@
+<!DOCTYPE html><html class="h-full" lang="id" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="web_standard" name="shell-type">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+    @layer base{
+      html,body{height:100%;margin:0;padding:0;}
+      body{overscroll-behavior:none;}
+    }
+    ::-webkit-scrollbar{width:6px;height:6px;}
+    ::-webkit-scrollbar-thumb{background:#d1c4c0;border-radius:4px;}
+    ::-webkit-scrollbar-track{background:transparent;}
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config={
+      darkMode:"class",
+      theme:{
+        extend:{
+          colors:{
+            "outline-variant":"#d1c4c0",
+            "on-surface-variant":"#4e4542",
+            "surface-container-lowest":"#ffffff",
+            "on-secondary-container":"#772f18",
+            "error":"#ba1a1a",
+            "tertiary-fixed-dim":"#bbcbbb",
+            "tertiary-container":"#111e15",
+            "on-background":"#1b1c1a",
+            "surface-bright":"#fbf9f5",
+            "secondary-container":"#fe997a",
+            "on-primary":"#ffffff",
+            "on-tertiary-fixed":"#111e15",
+            "primary-fixed":"#ede0dc",
+            "background":"#fbf9f5",
+            "primary-container":"#201a18",
+            "surface-variant":"#e4e2de",
+            "on-surface":"#1b1c1a",
+            "surface-container":"#efeeea",
+            "secondary":"#97472e",
+            "inverse-on-surface":"#f2f0ed",
+            "surface-tint":"#655c5a",
+            "on-primary-container":"#8c827e",
+            "surface":"#fbf9f5",
+            "secondary-fixed":"#ffdbd0",
+            "inverse-primary":"#d0c4c0",
+            "tertiary":"#000000",
+            "on-tertiary-fixed-variant":"#3c4a3e",
+            "secondary-fixed-dim":"#ffb59f",
+            "on-secondary-fixed":"#3a0a00",
+            "on-error":"#ffffff",
+            "on-secondary":"#ffffff",
+            "on-error-container":"#93000a",
+            "tertiary-fixed":"#d6e7d7",
+            "surface-container-low":"#f5f3ef",
+            "error-container":"#ffdad6",
+            "primary-fixed-dim":"#d0c4c0",
+            "outline":"#807571",
+            "on-tertiary-container":"#78887a",
+            "on-primary-fixed-variant":"#4d4542",
+            "surface-container-high":"#eae8e4",
+            "surface-container-highest":"#e4e2de",
+            "primary":"#000000",
+            "on-tertiary":"#ffffff",
+            "on-secondary-fixed-variant":"#793019",
+            "surface-dim":"#dbdad6",
+            "on-primary-fixed":"#201a18",
+            "inverse-surface":"#30312e"
+          },
+          borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},
+          spacing:{"margin":"3rem","gutter":"1.5rem","space-md":"1rem","space-xs":"0.25rem","margin-mobile":"1.25rem","space-sm":"0.5rem","space-xl":"2.5rem","space-lg":"1.5rem","gutter-sm":"1rem"},
+          fontFamily:{
+            "label-sm":["Plus Jakarta Sans"],
+            "label-md":["Plus Jakarta Sans"],
+            "headline-lg-mobile":["Playfair Display"],
+            "headline-sm":["Playfair Display"],
+            "headline-lg":["Playfair Display"],
+            "body-lg":["Plus Jakarta Sans"],
+            "display-hero":["Playfair Display"],
+            "display-hero-mobile":["Playfair Display"],
+            "label-caps":["Plus Jakarta Sans"],
+            "headline-md":["Playfair Display"],
+            "body-md":["Plus Jakarta Sans"],
+            "body-sm":["Plus Jakarta Sans"]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="h-full bg-background text-on-surface font-body-md antialiased flex overflow-hidden">
+<!-- 1. Persistent Left Navigation Sidebar (Identik 100% dengan Layar Hasil Rekomendasi) -->
+<aside class="w-64 xl:w-72 h-full shrink-0 z-40 bg-[#1a1412] text-[#fbf9f5] flex flex-col justify-between p-5 border-r border-[#2d221e] overflow-y-auto">
+<div class="space-y-7">
+<!-- Brand Header -->
+<a class="flex items-center gap-3.5 group px-1" href="#">
+<div class="w-10 h-10 rounded-xl bg-secondary flex items-center justify-center text-on-secondary shadow-md shrink-0 ring-2 ring-secondary/30">
+<svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+<path d="M2,19H20V21H2V19M4,3H18A1,1 0 0,1 19,4V8A4,4 0 0,1 15,12H13V15.5C13,16.33 12.33,17 11.5,17H6.5C5.67,17 5,16.33 5,15.5V5H4V3M15,5H7V15H11.5V10H15A2,2 0 0,0 17,8V5H15M19,5V8A2,2 0 0,0 21,10H22A1,1 0 0,0 23,9V5A1,1 0 0,0 22,4H19V5Z"></path>
+</svg>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-[20px] text-white tracking-tight font-bold leading-tight">CafeMatch</span>
+<span class="text-[9px] text-[#ffb59f] font-label-caps uppercase tracking-wider font-semibold mt-0.5">CURATED COFFEE ENGINE</span>
+</div>
+</a>
+<!-- Vertical Navigation Menu -->
+<nav class="space-y-1.5">
+<!-- 1. Temukan Selera -->
+<a class="flex items-center justify-between px-3.5 py-2.5 rounded-xl font-label-md text-xs text-[#c7beba] hover:text-white hover:bg-white/5 transition-all" data-path="temukan-selera" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[19px] text-[#a49995]">tune</span>
+<span class="font-medium">Temukan Selera</span>
+</div>
+</a>
+<!-- 2. Hasil Rekomendasi -->
+<a class="flex items-center justify-between px-3.5 py-2.5 rounded-xl font-label-md text-xs text-[#c7beba] hover:text-white hover:bg-white/5 transition-all" data-path="hasil-rekomendasi" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[19px] text-[#a49995]">coffee</span>
+<span class="font-medium">Hasil Rekomendasi</span>
+</div>
+<span class="inline-flex items-center justify-center px-2 py-0.5 rounded-full bg-white/10 text-[#d0c4c0] font-label-caps text-[9px] font-bold tracking-wide">4 Kedai</span>
+</a>
+<!-- 3. Favorit Saya -->
+<a class="flex items-center justify-between px-3.5 py-2.5 rounded-xl font-label-md text-xs text-[#c7beba] hover:text-white hover:bg-white/5 transition-all" data-path="favorit-saya" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[19px] text-[#a49995]">favorite</span>
+<span class="font-medium">Favorit Saya</span>
+</div>
+<span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-white/10 text-[#d0c4c0] font-label-caps text-[10px] font-bold">3</span>
+</a>
+<!-- 4. Detail Kedai (ACTIVE STATE - highlighted terracotta warm accent, text white) -->
+
+<!-- 5. Logika Pakar -->
+<a class="flex items-center justify-between px-3.5 py-2.5 rounded-xl font-label-md text-xs text-[#c7beba] hover:text-white hover:bg-white/5 transition-all" data-path="logika-pakar" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[19px] text-[#a49995]">psychology</span>
+<span class="font-medium">Logika Pakar</span>
+</div>
+</a>
+</nav>
+</div>
+<!-- Bottom Sidebar Profile & Meta Info -->
+<div class="pt-5 border-t border-[#2e231f] space-y-3.5">
+<!-- Location Picker Widget -->
+<div class="flex items-center justify-between px-3 py-2 rounded-xl bg-[#231b18] border border-[#3b2e29]">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-[17px] text-[#fe997a] shrink-0">location_on</span>
+<span class="font-label-sm text-xs text-white font-medium truncate">Senopati, Jaksel</span>
+</div>
+<button class="font-label-caps text-[10px] text-[#fe997a] hover:text-[#ffb59f] cursor-pointer font-bold uppercase shrink-0 transition-colors" type="button">Ubah</button>
+</div>
+<!-- Engine Status Badge -->
+<div class="flex items-center justify-between px-2 text-[10.5px] text-[#a49995]">
+<div class="flex items-center gap-2">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+</span>
+<span class="font-medium text-[#dcd4d0]">SCA Engine v2.4 • Online</span>
+</div>
+</div>
+<!-- User Profile Info -->
+<div class="flex items-center justify-between px-2 pt-1.5 border-t border-[#2a201c]">
+<div class="flex items-center gap-2.5 min-w-0">
+<img alt="Aditya S." class="w-8 h-8 rounded-full object-cover ring-1 ring-white/20 shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCexAJ6KuWAczyKTGH5JpuP8E3vwVJckzeNCEm3IyhSRmiLRRjKe2o2kiaVDoSipJ5FwebXxJ3mLylOiqR5wxjhqgy6l6MEW5W5jiYRIoGyz_Hiq7DN3NUAiD-pRN4dg3kstq86jvuTdxJQiVN_zv4zPhbULcvji1pE4yiyMBWioehTHTi4WxLrh7sjr0DuW1JHv1TOj5xHwGPgPJhOaX4nbp8t7nHMF7qcIcyk3Xku">
+<div class="flex flex-col text-left min-w-0">
+<span class="font-label-sm text-xs font-semibold text-white leading-tight truncate">Aditya S.</span>
+<span class="text-[10px] text-[#a49995] leading-none truncate">Q-Grader Enthusiast</span>
+</div>
+</div>
+<button aria-label="Pengaturan Akun" class="p-1.5 rounded-lg text-[#a49995] hover:text-white hover:bg-white/5 transition-colors shrink-0">
+<span class="material-symbols-outlined text-[17px]">settings</span>
+</button>
+</div>
+</div>
+</aside>
+<!-- 2. Area Konten Utama Sebelah Kanan (Detail Kedai Kroma Atelier & Roastery) -->
+<main class="flex-1 h-full overflow-y-auto bg-background text-on-surface">
+<div class="max-w-6xl mx-auto px-5 sm:px-8 py-6 space-y-7">
+<!-- Editorial Breadcrumb & Tag Strip -->
+<div class="flex flex-wrap items-center justify-between gap-3 text-xs">
+<nav aria-label="Breadcrumb" class="flex items-center gap-1.5 text-on-surface-variant font-label-sm">
+<a class="hover:text-primary transition-colors" href="#">Beranda</a>
+<span class="text-outline">/</span>
+<a class="hover:text-primary transition-colors" href="#">Hasil Rekomendasi</a>
+<span class="text-outline">/</span>
+<span class="text-primary font-semibold">Kroma Atelier &amp; Roastery</span>
+</nav>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-caps text-[10px] tracking-wider uppercase font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="">ID: CM-JKT-8821 • SCA ACCREDITED PARTNER</span>
+</div>
+</div>
+<!-- Shop Header: Nama Kedai, Badge Status, Jarak, & Tombol Aksi -->
+<header class="flex flex-col md:flex-row md:items-end justify-between gap-5 pb-1">
+<div class="space-y-2">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-caps text-[11px] font-bold">
+            #1 Specialty Roastery
+          </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-caps text-[11px] font-medium">
+<span class="material-symbols-outlined text-[13px]">verified</span> Q-Grader Bar
+          </span>
+</div>
+<h1 class="font-headline-lg text-[32px] sm:text-[38px] text-primary tracking-tight font-bold leading-tight">
+          Kroma Atelier &amp; Roastery
+        </h1>
+<div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-on-surface-variant">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-600/10 text-emerald-700 font-semibold text-[11px]">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+            Buka • 08:00 - 22:00
+          </span>
+<span class="text-outline">•</span>
+<span class="font-medium text-secondary inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">near_me</span>
+            800 m dari Senopati
+          </span>
+<span class="text-outline">•</span>
+<span class="">Jl. Cikajang No. 24, Petogogan</span>
+</div>
+</div>
+<!-- Quick Action Buttons -->
+<div class="flex items-center gap-2.5 shrink-0">
+<a class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary text-on-primary font-label-md text-xs font-semibold hover:bg-neutral-800 transition-colors shadow-2xs" href="#lokasi-peta">
+<span class="material-symbols-outlined text-[16px]">directions</span>
+<span class="">Buka Navigasi Peta</span>
+</a>
+<button class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-secondary-fixed text-on-secondary-fixed font-label-md text-xs font-semibold hover:bg-secondary hover:text-white transition-colors" id="favorite-btn" onclick="toggleFavorite()">
+<span class="material-symbols-outlined text-[17px] text-secondary" id="fav-icon" style="font-variation-settings: &quot;FILL&quot; 1;">favorite</span>
+<span id="fav-label" class="">Tersimpan</span>
+</button>
+<button aria-label="Bagikan" class="p-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors" onclick="shareShop()">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</button>
+</div>
+</header>
+<!-- Visual Gallery (Minimalist Modular Grid) -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-3.5">
+<div class="md:col-span-2 relative h-64 sm:h-72 rounded-xl overflow-hidden bg-surface-container group">
+<img alt="Slow Bar Barista Kroma" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoNEtJPptpIYGki0WIxYkJC8794kPgroloDyhhbUudzyUrEkrBeV6YQyDvnPRbBG6gkukAU5G0NGc2TkDS_LdKQBgGZQoCXXvrj9UgHwHDFo0LwNhLfXn2cAPb0ghQHTspekPHcg4Y405a2lqDbEMXiZwWyuDR-Tz8g26ngjPk-963M9Fix88e0cCwczSSrBLVeGHreKa92UXGLM7H3r9rVFQ2VplFIE2nlfynxA45">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-4">
+<span class="text-white text-xs font-medium tracking-wide">Area Bar Kopi</span>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-1 gap-3.5">
+<div class="relative h-32 sm:h-[136px] rounded-xl overflow-hidden bg-surface-container group">
+<img alt="Interior Kerja Silent Zone" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJp3qfpBXusxDoGl33eTQnarL3T4j0f9Ez3E_BlzOd8MhIT8F5aSFus78dil01enX9Er8dOi_oUEgVmijRR7ykZ5ABt_3R33d45uW0KNZiUY_hjCx1lkCbWt_gkKIPgZq4BG7xt-Vh6S9MchXZ_iPaj5lw9OU-Ep9EjzZLtaFJdY26-rSTaaNDsUFnMnyi51ioSTqNQzCxRZtFY130wP0d21GuH9hzmHpbNMbWhky8">
+<div class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-surface/90 text-on-surface text-[10px] font-semibold">
+            Meja Kerja • Silent Zone
+          </div>
+</div>
+<div class="relative h-32 sm:h-[136px] rounded-xl overflow-hidden bg-surface-container group">
+<img alt="In-House Roastery Micro-Batch" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIegcrdnXlxOnCEicXiWf5PHpF0efCZ5c0Jwq7lpDWBImY558EoTjIu1V7ll9wb2dH5lBdeMMvz7Q-f8EkNHdCC53vQ1jFOX5Zc-NWDCZrGdXVJ1x6dnDdpN7eEvPGU2NeEGG-JIIW0MQSmjnWXMUmIfh2xdM-x1I5iBpkfmqIw9GUlDBhoeK6J-2lF5YLi1-vDNfxDJVsi9HLHvJaOR9mhn1xM75R789C90AQvwsM">
+<div class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-surface/90 text-on-surface text-[10px] font-semibold">Area Roasting &amp; Bar</div>
+</div>
+</div>
+</section>
+<!-- Ringkasan Skor Pakar 96% Cocok & Chip Alasan Aturan (Rule Breakdown) -->
+<section class="bg-surface-container-low rounded-xl p-5 border border-outline-variant/40 space-y-4">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-3 border-b border-outline-variant/30">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-secondary text-white flex items-center justify-center font-bold text-lg shadow-sm">
+            96%
+          </div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-base text-primary font-bold">Kecocokan Sangat Tinggi</span>
+<span class="px-2 py-0.5 rounded bg-emerald-600/10 text-emerald-700 text-[10px] font-bold">Rule SCA Lolos</span>
+</div>
+<p class="text-xs text-on-surface-variant">Kombinasi metode seduh V60, lingkungan hening, dan radius &lt; 1 km.</p>
+</div>
+</div>
+<div class="text-right sm:self-center">
+<span class="text-[11px] font-label-caps text-secondary font-bold uppercase tracking-wider">Score: +98 / 100 Poin</span>
+</div>
+</div>
+<!-- Rule Match Chips -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+<div class="p-3 rounded-lg bg-surface-container border border-outline-variant/30">
+<div class="flex items-center justify-between text-[11px] font-semibold text-secondary mb-1">
+<span class="">R-01 Kopi &amp; Varietas</span>
+<span class="">+50 Poin</span>
+</div>
+<div class="flex flex-wrap gap-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-[10.5px]">V60 Switch</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-[10.5px]">Geisha Lot</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-[10.5px]">Light Roast</span>
+</div>
+</div>
+<div class="p-3 rounded-lg bg-surface-container border border-outline-variant/30"><div class="flex items-center justify-between text-[11px] font-semibold text-secondary mb-1"><span class="">R-02 Metode Seduh</span><span class="">+15 Poin</span></div><div class="flex flex-wrap gap-1"><span class="px-2 py-0.5 rounded bg-surface-container-highest text-[10.5px]">Manual Brew</span><span class="px-2 py-0.5 rounded bg-surface-container-highest text-[10.5px]">Slow Bar</span></div></div>
+<div class="p-3 rounded-lg bg-surface-container border border-outline-variant/30">
+<div class="flex items-center justify-between text-[11px] font-semibold text-secondary mb-1">
+<span class="">R-04 Suasana Kerja</span>
+<span class="">+15 Poin</span>
+</div>
+<div class="flex flex-wrap gap-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-[10.5px]">120 Mbps WiFi</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-[10.5px]">Stopkontak Meja</span>
+</div>
+</div>
+<div class="p-3 rounded-lg bg-surface-container border border-outline-variant/30">
+<div class="flex items-center justify-between text-[11px] font-semibold text-secondary mb-1">
+<span class="">R-05 Kedekatan Akses</span>
+<span class="">+18 Poin</span>
+</div>
+<div class="flex flex-wrap gap-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-[10.5px]">800 m Dekat</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-[10.5px]">Parkir Valet</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Menu Kopi Unggulan & Cupping Notes (4 Cards) -->
+<section class="space-y-3.5">
+<div class="flex items-end justify-between">
+<div>
+<span class="font-label-caps text-[10.5px] text-secondary uppercase tracking-widest font-bold">Kurasi Q-Grader</span>
+<h2 class="font-headline-md text-xl font-bold text-primary">Menu Kopi Unggulan</h2>
+</div>
+<span class="text-xs text-on-surface-variant">Rasio seduh 1:16 • TDS 1.35%</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
+<!-- Menu 1 -->
+<div class="p-4 rounded-xl bg-surface-container-low border border-outline-variant/40 flex flex-col justify-between hover:border-secondary transition-all">
+<div class="space-y-2">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-tertiary-fixed text-on-tertiary-fixed">WASHED</span>
+<span class="text-xs font-bold text-secondary">Rp 48k</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-sm font-bold text-primary">Ethiopia Guji Hambela</h3>
+<p class="text-[11px] text-on-surface-variant">Light Roast • Hario V60</p>
+</div>
+<div class="flex flex-wrap gap-1">
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-[10px] text-on-surface">Jasmine</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-[10px] text-on-surface">White Peach</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-[10px] text-on-surface">Bergamot</span>
+</div>
+</div>
+<div class="mt-3 pt-2 border-t border-outline-variant/30 flex justify-between text-[10px] text-on-surface-variant">
+<span class="">Acidity: Tinggi</span>
+<span class="">Body: Lembut</span>
+</div>
+</div>
+<!-- Menu 2 -->
+<div class="p-4 rounded-xl bg-surface-container-low border border-outline-variant/40 flex flex-col justify-between hover:border-secondary transition-all">
+<div class="space-y-2">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-secondary-fixed text-on-secondary-fixed">ANAEROBIC</span>
+<span class="text-xs font-bold text-secondary">Rp 85k</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-sm font-bold text-primary">Panama Boquete Geisha</h3>
+<p class="text-[11px] text-on-surface-variant">Light Cinnamon • Origami</p>
+</div>
+<div class="flex flex-wrap gap-1">
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-[10px] text-on-surface">Floral Blossom</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-[10px] text-on-surface">Papaya</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-[10px] text-on-surface">Wild Honey</span>
+</div>
+</div>
+<div class="mt-3 pt-2 border-t border-outline-variant/30 flex justify-between text-[10px] text-on-surface-variant">
+<span class="">Acidity: Kompleks</span>
+<span class="">Sweet: Madu</span>
+</div>
+</div>
+<!-- Menu 3 -->
+<div class="p-4 rounded-xl bg-surface-container-low border border-outline-variant/40 flex flex-col justify-between hover:border-secondary transition-all">
+<div class="space-y-2">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-surface-container-highest text-on-surface">HOUSE BLEND</span>
+<span class="text-xs font-bold text-secondary">Rp 42k</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-sm font-bold text-primary">Magic Flat White</h3>
+<p class="text-[11px] text-on-surface-variant">Double Ristretto • Fresh Milk</p>
+</div>
+<div class="flex flex-wrap gap-1">
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-[10px] text-on-surface">Brown Sugar</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-[10px] text-on-surface">Hazelnut</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-[10px] text-on-surface">Silky Milk</span>
+</div>
+</div>
+<div class="mt-3 pt-2 border-t border-outline-variant/30 flex justify-between text-[10px] text-on-surface-variant">
+<span class="">Body: Tebal</span>
+<span class="">Acidity: Lembut</span>
+</div>
+</div>
+<!-- Menu 4 -->
+<div class="p-4 rounded-xl bg-surface-container-low border border-outline-variant/40 flex flex-col justify-between hover:border-secondary transition-all">
+<div class="space-y-2">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-surface-container-highest text-on-surface">SLOW DRIP</span>
+<span class="text-xs font-bold text-secondary">Rp 45k</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-sm font-bold text-primary">16h Cold Extraction</h3>
+<p class="text-[11px] text-on-surface-variant">Flores Bajawa • Chilled Tumbler</p>
+</div>
+<div class="flex flex-wrap gap-1">
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-[10px] text-on-surface">Dark Cherry</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-[10px] text-on-surface">Winey Aroma</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-[10px] text-on-surface">Cacao Nib</span>
+</div>
+</div>
+<div class="mt-3 pt-2 border-t border-outline-variant/30 flex justify-between text-[10px] text-on-surface-variant">
+<span class="">Clarity: Tinggi</span>
+<span class="">Sweet: Karamel</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Spesifikasi Alat & Fasilitas (2 Kolom Modular) -->
+<section class="grid grid-cols-1 gap-4">
+<!-- Peralatan Seduh -->
+
+<!-- Fasilitas & Jam Operasional -->
+<div class="p-5 rounded-xl bg-surface-container-low border border-outline-variant/40 space-y-3">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-base font-bold text-primary">Fasilitas &amp; Jam Buka</h3>
+<span class="material-symbols-outlined text-[20px] text-secondary">schedule</span>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container text-[11px] font-medium text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-secondary">wifi</span> WiFi 120 Mbps
+          </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container text-[11px] font-medium text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-secondary">power</span> Colokan Tiap Meja
+          </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container text-[11px] font-medium text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-secondary">volume_mute</span> Tenang &amp; Produktif
+          </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container text-[11px] font-medium text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-secondary">local_parking</span> Parkir Mobil + Valet
+          </span>
+</div>
+<div class="space-y-1.5 pt-1 text-xs">
+<div class="flex justify-between py-1 px-2.5 rounded bg-surface-container/60">
+<span class="font-medium text-primary">Senin – Jumat</span>
+<span class="text-on-surface-variant">08:00 – 22:00 WIB</span>
+</div>
+<div class="flex justify-between py-1 px-2.5 rounded bg-surface-container/60">
+<span class="font-medium text-primary">Sabtu – Minggu</span>
+<span class="text-on-surface-variant">07:30 – 22:30 WIB</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Lokasi & Peta Terpadu -->
+<section class="p-5 rounded-xl bg-surface-container-low border border-outline-variant/40 space-y-4" id="lokasi-peta">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div>
+<span class="font-label-caps text-[10.5px] text-secondary uppercase tracking-widest font-bold">Aksesibilitas</span>
+<h3 class="font-headline-sm text-lg font-bold text-primary">Jl. Cikajang No. 24, Petogogan</h3>
+<p class="text-xs text-on-surface-variant mt-0.5">800 m • 9 menit jalan kaki dari Senopati Raya</p>
+</div>
+<div class="flex items-center gap-2">
+<a class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary text-on-primary text-xs font-semibold hover:bg-neutral-800 transition-colors shadow-2xs" href="https://maps.google.com/?q=Kroma+Atelier+Jakarta" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[15px]">map</span>
+<span class="">Buka Google Maps</span>
+</a>
+<a class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-xs font-semibold text-on-surface transition-colors" href="https://waze.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[15px]">navigation</span>
+<span class="">Waze</span>
+</a>
+</div>
+</div>
+<!-- Map Snapshot Container -->
+<div class="relative w-full h-56 sm:h-64 rounded-xl overflow-hidden bg-surface-container">
+<div class="w-full h-full bg-cover bg-center" data-location="Jl. Cikajang No. 24, Petogogan, Jakarta Selatan" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuARpFtg2_lvRUdWAsRUW7Y_KnbXXWWYv2XW_09m-4QP4b5WnYim1fPgINUOXEWLFWQlQZCzE3spUmqZsw77Ks-cnLKprZH4cBXiqufNM2MkFVIfOdMjlTR-ox8jsraamPBKHBpwOvz735_BOKUlbwn4ABM1OCRcT8UyXeXapEoLCVqKQ8ZSOkk7ROIMXUmV6QR8Iwrh75AdyGDHooeAdZikRXOBgM_gcQ2tccvLxnvQ&quot;);"></div>
+<div class="absolute bottom-3 left-3 px-3 py-2 rounded-lg bg-surface/95 backdrop-blur-md shadow-md flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-secondary text-white flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">storefront</span>
+</div>
+<div class="text-left">
+<span class="text-xs font-bold text-primary block leading-tight">Kroma Atelier &amp; Roastery</span>
+<span class="text-[10px] text-on-surface-variant">Buka • Radius 800m</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer Copyright -->
+<footer class="pt-2 pb-6 border-t border-outline-variant/30 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-on-surface-variant">
+<span class="">© 2024 CafeMatch Indonesia • SCA Certified Coffee Matcher</span>
+<span class="">Engine v2.4 • Terinspirasi Standar Sensori Specialty Coffee Association</span>
+</footer>
+</div>
+</main>
+<script>
+  function toggleFavorite() {
+    const favIcon = document.getElementById('fav-icon');
+    const favLabel = document.getElementById('fav-label');
+    const favBtn = document.getElementById('favorite-btn');
+    
+    const isFilled = favIcon.style.fontVariationSettings.includes("'FILL' 1");
+    if (isFilled) {
+      favIcon.style.fontVariationSettings = "'FILL' 0";
+      favIcon.textContent = 'favorite_border';
+      favLabel.textContent = 'Simpan Favorit';
+      favBtn.classList.remove('bg-secondary-fixed', 'text-on-secondary-fixed');
+      favBtn.classList.add('bg-surface-container', 'text-on-surface');
+    } else {
+      favIcon.style.fontVariationSettings = "'FILL' 1";
+      favIcon.textContent = 'favorite';
+      favLabel.textContent = 'Tersimpan';
+      favBtn.classList.add('bg-secondary-fixed', 'text-on-secondary-fixed');
+      favBtn.classList.remove('bg-surface-container', 'text-on-surface');
+    }
+  }
+
+  function shareShop() {
+    if (navigator.share) {
+      navigator.share({
+        title: 'Kroma Atelier & Roastery - CafeMatch',
+        text: 'Rekomendasi kedai kopi specialty 96% cocok untuk pour-over & fokus kerja.',
+        url: window.location.href
+      }).catch(() => {});
+    } else {
+      navigator.clipboard.writeText(window.location.href);
+      alert('Tautan profil kedai berhasil disalin.');
+    }
+  }
+</script>
+
+
+</body></html>

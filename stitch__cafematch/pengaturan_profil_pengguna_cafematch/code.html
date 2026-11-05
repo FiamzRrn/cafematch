@@ -1,0 +1,547 @@
+<!DOCTYPE html><html lang="id" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><title>CafeMatch - Curated Coffee Engine</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,600&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}}::-webkit-scrollbar{width:6px;height:6px;}::-webkit-scrollbar-thumb{background:#d6d3d1;border-radius:9999px;}::-webkit-scrollbar-track{background:transparent;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"outline-variant":"#d1c4c0","on-surface-variant":"#4e4542","surface-container-lowest":"#ffffff","on-secondary-container":"#772f18","error":"#ba1a1a","tertiary-fixed-dim":"#bbcbbb","tertiary-container":"#111e15","on-background":"#1b1c1a","surface-bright":"#fbf9f5","secondary-container":"#fe997a","on-primary":"#ffffff","on-tertiary-fixed":"#111e15","primary-fixed":"#ede0dc","background":"#fbf9f5","primary-container":"#201a18","surface-variant":"#e4e2de","on-surface":"#1b1c1a","surface-container":"#efeeea","secondary":"#97472e","inverse-on-surface":"#f2f0ed","surface-tint":"#655c5a","on-primary-container":"#8c827e","surface":"#fbf9f5","secondary-fixed":"#ffdbd0","inverse-primary":"#d0c4c0","tertiary":"#000000","on-tertiary-fixed-variant":"#3c4a3e","secondary-fixed-dim":"#ffb59f","on-secondary-fixed":"#3a0a00","on-error":"#ffffff","on-secondary":"#ffffff","on-error-container":"#93000a","tertiary-fixed":"#d6e7d7","surface-container-low":"#f5f3ef","error-container":"#ffdad6","primary-fixed-dim":"#d0c4c0","outline":"#807571","on-tertiary-container":"#78887a","on-primary-fixed-variant":"#4d4542","surface-container-high":"#eae8e4","surface-container-highest":"#e4e2de","primary":"#000000","on-tertiary":"#ffffff","on-secondary-fixed-variant":"#793019","surface-dim":"#dbdad6","on-primary-fixed":"#201a18","inverse-surface":"#30312e"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin-mobile":"1.25rem","space-md":"1rem","space-sm":"0.5rem","margin":"3rem","space-xl":"2.5rem","gutter-sm":"1rem","gutter":"1.5rem","space-xs":"0.25rem","space-lg":"1.5rem"},"fontFamily":{"label-caps":["Plus Jakarta Sans"],"headline-lg":["Playfair Display"],"display-hero-mobile":["Playfair Display"],"headline-md":["Playfair Display"],"headline-sm":["Playfair Display"],"label-md":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"display-hero":["Playfair Display"],"body-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Playfair Display"]},"fontSize":{"label-caps":["11px",{"lineHeight":"16px","letterSpacing":"0.08em","fontWeight":"600"}],"headline-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.015em","fontWeight":"400"}],"display-hero-mobile":["38px",{"lineHeight":"44px","letterSpacing":"-0.01em","fontWeight":"400"}],"headline-md":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"500"}],"headline-sm":["22px",{"lineHeight":"30px","letterSpacing":"0em","fontWeight":"600"}],"label-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"500"}],"body-md":["15px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"label-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"20px","letterSpacing":"0.005em","fontWeight":"400"}],"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.02em","fontWeight":"400"}],"body-lg":["18px",{"lineHeight":"28px","letterSpacing":"-0.005em","fontWeight":"400"}],"headline-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"500"}]}}}};</script><meta content="web_dashboard" name="shell-type"></head>
+<body class="bg-background font-body-md text-on-surface antialiased min-h-screen selection:bg-secondary-fixed selection:text-on-secondary-fixed pl-72">
+<!-- Left Sidebar Navigation (Consistent with Temukan Selera) -->
+<aside class="fixed inset-y-0 left-0 bg-[#1a1412] text-[#fbf9f5] flex flex-col justify-between border-r border-[#2d221e] min-h-screen z-50 shadow-2xl shrink-0 overflow-y-auto w-72 p-6">
+<div class="space-y-7">
+<!-- Brand Header -->
+<a class="flex items-center gap-3.5 group px-1" href="#">
+<div class="w-10 h-10 rounded-xl bg-secondary flex items-center justify-center text-white shadow-md shrink-0 ring-2 ring-secondary/30">
+<svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+<path d="M2,19H20V21H2V19M4,3H18A1,1 0 0,1 19,4V8A4,4 0 0,1 15,12H13V15.5C13,16.33 12.33,17 11.5,17H6.5C5.67,17 5,16.33 5,15.5V5H4V3M15,5H7V15H11.5V10H15A2,2 0 0,0 17,8V5H15M19,5V8A2,2 0 0,0 21,10H22A1,1 0 0,0 23,9V5A1,1 0 0,0 22,4H19V5Z"></path>
+</svg>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-[20px] text-white tracking-tight font-bold leading-tight">CafeMatch</span>
+<span class="text-[9px] text-[#ffb59f] font-label-caps uppercase tracking-wider font-semibold mt-0.5">CURATED COFFEE ENGINE</span>
+</div>
+</a>
+<!-- Main Navigation List (Exact items from Temukan Selera, without Pengaturan text link) -->
+<nav class="space-y-1.5">
+<!-- 1. Temukan Selera -->
+<a class="flex items-center justify-between px-3.5 py-2.5 rounded-xl font-label-md text-xs text-[#c7beba] hover:text-white hover:bg-white/5 transition-all" href="#" data-path="temukan-selera">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[19px] text-[#a49995]">tune</span>
+<span class="font-medium">Temukan Selera</span>
+</div>
+</a>
+<!-- 2. Hasil Rekomendasi -->
+<a class="flex items-center justify-between px-3.5 py-2.5 rounded-xl font-label-md text-xs text-[#c7beba] hover:text-white hover:bg-white/5 transition-all" href="#" data-path="hasil-rekomendasi"><div class="flex items-center gap-3 min-w-0"><span class="material-symbols-outlined text-[19px] text-[#a49995] shrink-0">coffee</span><span class="font-medium truncate">Hasil Rekomendasi</span></div><span class="inline-flex items-center justify-center px-2 py-0.5 rounded-full bg-white/10 text-[#d0c4c0] font-label-caps text-[9px] font-bold tracking-wide shrink-0">4&nbsp;Kedai</span></a>
+<!-- 3. Favorit Saya -->
+<a class="flex items-center justify-between px-3.5 py-2.5 rounded-xl font-label-md text-xs text-[#c7beba] hover:text-white hover:bg-white/5 transition-all" href="#" data-path="favorit-saya">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[19px] text-[#a49995]">favorite</span>
+<span class="font-medium">Favorit Saya</span>
+</div>
+<span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-white/10 text-[#d0c4c0] font-label-caps text-[10px] font-bold">3</span>
+</a>
+<!-- 4. Logika Pakar -->
+<a class="flex items-center justify-between px-3.5 py-2.5 rounded-xl font-label-md text-xs text-[#c7beba] hover:text-white hover:bg-white/5 transition-all" href="#" data-path="tentang-logika-pakar">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[19px] text-[#a49995]">psychology</span>
+<span class="font-medium">Logika Pakar</span>
+</div>
+</a>
+</nav>
+</div>
+<!-- Bottom Section: Location, SCA status, Aditya S Profile with Settings Cog -->
+<div class="pt-5 border-t border-[#2e231f] space-y-3.5">
+<!-- Location Box -->
+<div class="flex items-center justify-between px-3 py-2 rounded-xl bg-[#231b18] border border-[#3b2e29]">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-[17px] text-[#fe997a] shrink-0">location_on</span>
+<span class="font-label-sm text-xs text-white font-medium truncate">Senopati, Jaksel</span>
+</div>
+<button class="font-label-caps text-[10px] text-[#fe997a] hover:text-[#ffb59f] cursor-pointer font-bold uppercase shrink-0 transition-colors" type="button">Ubah</button>
+</div>
+<!-- Engine Online Status -->
+<div class="flex items-center justify-between px-2 text-[10.5px] text-[#a49995]">
+<div class="flex items-center gap-2">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+</span>
+<span class="font-medium text-[#dcd4d0]">SCA Engine v2.4 • Online</span>
+</div>
+</div>
+<!-- Aditya Profile Row with active indicator / Settings icon -->
+<div class="flex items-center justify-between px-2 pt-1.5 border-t border-[#2a201c]">
+<div class="flex items-center gap-2.5 min-w-0">
+<img alt="Aditya S." class="w-8 h-8 rounded-full object-cover ring-1 ring-white/20 shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCexAJ6KuWAczyKTGH5JpuP8E3vwVJckzeNCEm3IyhSRmiLRRjKe2o2kiaVDoSipJ5FwebXxJ3mLylOiqR5wxjhqgy6l6MEW5W5jiYRIoGyz_Hiq7DN3NUAiD-pRN4dg3kstq86jvuTdxJQiVN_zv4zPhbULcvji1pE4yiyMBWioehTHTi4WxLrh7sjr0DuW1JHv1TOj5xHwGPgPJhOaX4nbp8t7nHMF7qcIcyk3Xku">
+<div class="flex flex-col text-left min-w-0">
+<span class="font-label-sm text-xs font-semibold text-white leading-tight truncate">Aditya S.</span>
+<span class="text-[10px] text-[#a49995] leading-none truncate">Q-Grader Enthusiast</span>
+</div>
+</div>
+<button aria-label="Pengaturan Akun Aktif" class="p-1.5 rounded-lg text-[#fe997a] bg-white/5 hover:text-white transition-colors shrink-0" title="Pengaturan Akun Aktif">
+<span class="material-symbols-outlined text-[17px]">settings</span>
+</button>
+</div>
+</div>
+</aside>
+<!-- App Workspace Body -->
+<main class="w-full max-w-[1536px] mx-auto px-6 lg:px-12 py-8 flex flex-col gap-8">
+<div class="flex flex-col w-full">
+<!-- Top Navigation & Header Block -->
+<header class="flex flex-col gap-4 pb-6 border-b border-surface-container-high/80">
+<div class="flex flex-wrap items-center justify-between gap-4">
+<div class="flex items-center gap-2">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant/70 tracking-widest text-[11px]">WORKSPACE</span>
+<span class="text-on-surface-variant/40 font-body-sm text-body-sm">/</span>
+<span class="font-label-caps text-label-caps uppercase text-secondary font-semibold tracking-wider text-[11px]">AKUN &amp; PENGATURAN</span>
+</div>
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-high shadow-xs">
+<span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Sesi Aktif (Tersinkronisasi Lokal &amp; Cloud)</span>
+</div>
+</div>
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pt-2">
+<div class="max-w-3xl flex flex-col gap-2">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight leading-tight">Pengaturan Akun &amp; Profil</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant/90 font-light">
+            Kelola identitas kurasi kopi, status autentikasi sesi, dan preferensi privasi sensoris akun CafeMatch Anda.
+          </p>
+</div>
+<!-- Quick Action Buttons -->
+<div class="flex items-center gap-3 shrink-0">
+<button class="px-5 py-2.5 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-colors shadow-xs" onclick="resetFormState()" type="button">
+            Batal
+          </button>
+<button class="px-6 py-2.5 rounded-xl bg-primary hover:bg-on-surface-variant text-on-primary font-label-md text-label-md transition-all shadow-sm flex items-center gap-2" onclick="triggerSaveNotification()" type="button">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+            Simpan Pembaruan Profil
+          </button>
+</div>
+</div>
+</header>
+<!-- Notification Toast Alert (Hidden initially) -->
+<div class="hidden transition-all duration-300 ease-out my-6 p-4 rounded-xl bg-surface-container-high shadow-sm flex items-center justify-between" id="saveToast">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary-container shadow-xs">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Perubahan Berhasil Disimpan</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Preferensi lokal dan metadata profil Anda telah diperbarui secara aman.</span>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface p-1 rounded" onclick="closeToast()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Main 2-Column Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start pt-6">
+<!-- KOLOM KIRI (span 5): Profil & Data Pengguna -->
+<section class="lg:col-span-5 flex flex-col gap-6">
+<!-- Kartu Identitas Akun & Indeks Ekstraksi -->
+<div class="bg-surface-container-low rounded-2xl p-7 flex flex-col gap-6 shadow-sm border border-surface-container relative overflow-hidden"><div class="absolute -right-10 -top-10 w-40 h-40 bg-secondary-fixed/40 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Header Profile Row -->
+<div class="flex items-center gap-4 relative">
+  <div class="relative shrink-0">
+    <img alt="Aditya S." class="w-20 h-20 rounded-2xl object-cover shadow-sm ring-2 ring-surface-container-highest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHfIvqyH7lR-CBbm-U21s0D9DKoA_PQZwUyTmBJ8bBqdr2LbNEjKiHqMZJMMODVvH0Bgk8TTiI-S0HQkd9NO_HLZYwKDP59R34sWs6feghVBkqd1Z6-JDf5T9Hm5CODt-7IOcnSelb7HIcDe1M78iieoHvqA24eZiDDEd7pg87xQf56ibQIZH-J7ce3sHu1JFPgnd55XiQA70TCoPnTM7TUODQuBesCA1SEFzBcImp">
+    <button class="absolute -bottom-1.5 -right-1.5 p-1.5 rounded-lg bg-surface-container-lowest text-on-surface shadow-md hover:bg-secondary hover:text-white transition-colors cursor-pointer border border-surface-container" title="Ubah Foto" type="button">
+      <span class="material-symbols-outlined text-[15px]">photo_camera</span>
+    </button>
+  </div>
+  <div class="flex flex-col min-w-0 flex-1">
+    <div class="flex items-center gap-2 flex-wrap">
+      <h2 class="font-headline-sm text-headline-sm text-on-surface truncate">Aditya S.</h2>
+      <span class="material-symbols-outlined text-secondary text-[20px] shrink-0" title="Terverifikasi Q-Grader">verified</span>
+    </div>
+    <p class="font-label-sm text-label-sm text-secondary font-medium mt-0.5">Q-Grader Arabica Enthusiast</p>
+    <div class="mt-2.5 flex items-center gap-2">
+      <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-tertiary-fixed text-tertiary-container text-[10px] font-label-caps uppercase tracking-wider font-semibold shadow-xs">
+        <span class="material-symbols-outlined text-[14px]">stars</span>
+        LEVEL 2 VERIFIED
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- Divider line -->
+<div class="border-t border-outline-variant/30"></div>
+
+<!-- Metadata Account List -->
+<div class="flex flex-col gap-2">
+  <div class="flex items-center justify-between py-2.5 px-3.5 rounded-xl bg-surface-container-lowest shadow-xs border border-surface-container/70">
+    <span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-2.5">
+      <span class="material-symbols-outlined text-[18px] text-on-surface-variant/80">mail</span>
+      Email Terdaftar
+    </span>
+    <div class="flex items-center gap-1.5">
+      <span class="font-label-sm text-label-sm text-on-surface font-semibold">aditya.coffee@cafematch.id</span>
+      <span class="material-symbols-outlined text-emerald-600 text-[16px]" title="Terverifikasi">check_circle</span>
+    </div>
+  </div>
+  <div class="flex items-center justify-between py-2.5 px-3.5 rounded-xl bg-surface-container-lowest shadow-xs border border-surface-container/70">
+    <span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-2.5">
+      <span class="material-symbols-outlined text-[18px] text-on-surface-variant/80">badge</span>
+      ID Pengguna
+    </span>
+    <span class="font-label-caps text-label-caps uppercase text-on-surface bg-surface-container px-2 py-0.5 rounded tracking-widest font-mono font-semibold text-[11px]">CM-8924-ID</span>
+  </div>
+  <div class="flex items-center justify-between py-2.5 px-3.5 rounded-xl bg-surface-container-lowest shadow-xs border border-surface-container/70">
+    <span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-2.5">
+      <span class="material-symbols-outlined text-[18px] text-on-surface-variant/80">calendar_today</span>
+      Tanggal Bergabung
+    </span>
+    <span class="font-label-sm text-label-sm text-on-surface font-medium">14 Agustus 2024</span>
+  </div>
+  <div class="flex items-center justify-between py-2.5 px-3.5 rounded-xl bg-surface-container-lowest shadow-xs border border-surface-container/70">
+    <span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-2.5">
+      <span class="material-symbols-outlined text-[18px] text-secondary">explore</span>
+      Lokasi Default GPS
+    </span>
+    <span class="font-label-sm text-label-sm text-on-surface font-medium">Kebayoran Baru, Jaksel</span>
+  </div>
+</div>
+
+<!-- Divider line -->
+<div class="border-t border-outline-variant/30"></div>
+
+<!-- Indeks Ekstraksi Terpilih -->
+<div class="p-4 rounded-xl bg-surface-container flex flex-col gap-3.5 border border-surface-container-highest">
+  <div class="flex items-center justify-between">
+    <div class="flex items-center gap-2">
+      <span class="material-symbols-outlined text-[18px] text-secondary">coffee_maker</span>
+      <span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant text-[10px] font-semibold">Indeks Ekstraksi Terpilih</span>
+    </div>
+    <span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold shadow-xs">92.4 SCA</span>
+  </div>
+  <div class="grid grid-cols-3 gap-2.5 text-center">
+    <div class="bg-surface-container-lowest p-3 rounded-xl shadow-xs border border-surface-container/70 flex flex-col items-center justify-center">
+      <span class="font-headline-sm text-headline-sm text-on-surface leading-tight">V60</span>
+      <span class="font-label-caps text-label-caps text-[9px] text-on-surface-variant uppercase mt-1 tracking-wider">Pour-Over</span>
+    </div>
+    <div class="bg-surface-container-lowest p-3 rounded-xl shadow-xs border border-surface-container/70 flex flex-col items-center justify-center">
+      <span class="font-headline-sm text-headline-sm text-secondary leading-tight">High</span>
+      <span class="font-label-caps text-label-caps text-[9px] text-on-surface-variant uppercase mt-1 tracking-wider">Acidity</span>
+    </div>
+    <div class="bg-surface-container-lowest p-3 rounded-xl shadow-xs border border-surface-container/70 flex flex-col items-center justify-center">
+      <span class="font-headline-sm text-headline-sm text-on-surface leading-tight">Light</span>
+      <span class="font-label-caps text-label-caps text-[9px] text-on-surface-variant uppercase mt-1 tracking-wider">Roast Profile</span>
+    </div>
+  </div>
+</div></div>
+<!-- Data Tampilan Profil Publik Card -->
+<div class="bg-surface-container-low rounded-2xl p-7 flex flex-col gap-5 shadow-sm border border-surface-container">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[22px]">tune</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Data Tampilan Profil</h3>
+</div>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant/70 text-[10px] font-semibold">Publik Kedai</span>
+</div>
+<form class="flex flex-col gap-4" onsubmit="event.preventDefault(); triggerSaveNotification();">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-medium">Nama Tampilan Publik</label>
+<input class="w-full px-3.5 py-2.5 rounded-xl bg-surface-container-lowest text-on-surface font-body-md text-body-md border border-outline-variant/40 focus:outline-none focus:ring-1 focus:ring-on-surface placeholder:text-on-surface-variant/50 shadow-xs" type="text" value="Aditya S.">
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-medium">Bio &amp; Karakteristik Seduh</label>
+<textarea class="w-full px-3.5 py-2.5 rounded-xl bg-surface-container-lowest text-on-surface font-body-md text-body-md border border-outline-variant/40 focus:outline-none focus:ring-1 focus:ring-on-surface placeholder:text-on-surface-variant/50 shadow-xs resize-none" rows="3">Penjelajah beans washed anaerobic &amp; penikmat pour-over V60 acidity tinggi.</textarea>
+<span class="font-body-sm text-body-sm text-on-surface-variant/70 text-right text-[11px]">84/140 karakter</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-medium">Wilayah Jelajah Utama</label>
+<input class="w-full px-3.5 py-2.5 rounded-xl bg-surface-container-lowest text-on-surface font-body-md text-body-md border border-outline-variant/40 focus:outline-none focus:ring-1 focus:ring-on-surface shadow-xs" type="text" value="Senopati, Gunawarman &amp; Dharmawangsa">
+</div>
+</form>
+</div>
+</section>
+<!-- KOLOM KANAN (span 7): Autentikasi, Keamanan & Preferensi Sistem -->
+<section class="lg:col-span-7 flex flex-col gap-6">
+<!-- Status Autentikasi & Keamanan Section -->
+<div class="bg-surface-container-low rounded-2xl p-7 flex flex-col gap-6 shadow-sm border border-surface-container">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed shrink-0">
+<span class="material-symbols-outlined text-[22px]">shield</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Status Autentikasi &amp; Keamanan</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Kelola kredensial login, sesi aktif multi-perangkat, dan proteksi akun</span>
+</div>
+</div>
+<span class="font-label-caps text-label-caps uppercase px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 self-start sm:self-auto text-[10px] font-semibold">Tingkat Keamanan Tinggi</span>
+</div>
+<!-- Current Active Device Box -->
+<div class="p-5 rounded-xl bg-surface-container-lowest flex flex-col gap-4 shadow-xs border border-surface-container/70">
+<div class="flex items-start justify-between gap-4">
+<div class="flex items-start gap-3.5">
+<div class="p-2.5 rounded-xl bg-surface-container text-on-surface shrink-0">
+<span class="material-symbols-outlined text-[24px]">laptop_mac</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Browser Chrome di macOS Sonoma</span>
+<span class="w-2 h-2 rounded-full bg-emerald-600"></span>
+<span class="font-label-caps text-label-caps uppercase text-emerald-700 text-[10px] font-semibold">Sesi Ini</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Jakarta, Indonesia • IP 180.252.xxx.xxx</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant/70 text-[11px]">Terakhir aktif: Hari ini, 09:42 WIB</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-emerald-600 text-[22px]">lock</span>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-surface-container">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary">phonelink_lock</span>
+<span class="font-label-sm text-label-sm text-on-surface">Autentikasi Dua Faktor (2FA):</span>
+<span class="font-label-caps text-label-caps uppercase text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded text-[10px] font-semibold">Aktif</span>
+</div>
+<button class="font-label-sm text-label-sm text-secondary hover:underline font-semibold" type="button">Konfigurasi 2FA</button>
+</div>
+</div>
+<!-- Password and Other Sessions Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="p-4 rounded-xl bg-surface-container flex flex-col justify-between gap-3">
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Kata Sandi Akun</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[13px]">Terakhir diperbarui 42 hari yang lalu dengan standar SCA-grade token.</span>
+</div>
+<button class="w-full py-2.5 px-3 rounded-xl bg-surface-container-lowest hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors text-left flex items-center justify-between shadow-xs" onclick="openPasswordModal()" type="button">
+<span class="">Ubah Kata Sandi</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+<div class="p-4 rounded-xl bg-surface-container flex flex-col justify-between gap-3">
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Sesi Perangkat Lain</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[13px]">1 perangkat seluler (iPhone 15 Pro) tersambung di Bandung.</span>
+</div>
+<button class="w-full py-2.5 px-3 rounded-xl bg-surface-container-lowest hover:bg-surface-container-high text-secondary font-label-sm text-label-sm transition-colors text-left flex items-center justify-between shadow-xs" onclick="terminateOtherSessions()" type="button">
+<span class="">Keluar dari Semua Perangkat Lain</span>
+<span class="material-symbols-outlined text-[16px]">logout</span>
+</button>
+</div>
+</div>
+<!-- Primary Logout Zone -->
+<div class="pt-5 flex flex-col items-center justify-center text-center gap-3.5 border-t border-surface-container">
+<div class="flex flex-col items-center text-center max-w-md">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Akhiri Sesi CafeMatch</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Keluar secara aman dari akun Aditya S. pada perangkat ini.</span>
+</div>
+<button class="w-full sm:w-auto px-7 py-2.5 rounded-xl bg-error hover:bg-error-container hover:text-on-error-container text-white font-label-md text-label-md transition-all flex items-center justify-center gap-2 shadow-sm shrink-0 border border-error cursor-pointer" onclick="openLogoutModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">power_settings_new</span>
+              Keluar dari Akun (Logout)
+            </button>
+</div>
+</div>
+<!-- Preferensi Sistem & Kurasi Kopi (PRD F-08) -->
+<div class="bg-surface-container-low rounded-2xl p-7 flex flex-col gap-6 shadow-sm border border-surface-container">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-tertiary-fixed flex items-center justify-center text-tertiary-container shrink-0">
+<span class="material-symbols-outlined text-[22px]">memory</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Preferensi Sistem &amp; Kurasi Kopi</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Standar privasi PRD F-08 dan konfigurasi mesin pencari</span>
+</div>
+</div>
+</div>
+<!-- Preference Toggles List -->
+<div class="flex flex-col gap-3.5">
+<!-- Preference Item 1: Local Storage Privacy (PRD F-08) -->
+<div class="p-4 rounded-xl bg-surface-container-lowest flex items-start justify-between gap-4 shadow-xs border border-surface-container/70">
+<div class="flex items-start gap-3.5">
+<div class="p-2 rounded-xl bg-surface-container text-on-surface shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">database</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Mode Privasi Penyimpanan Lokal</span>
+<span class="font-label-caps text-label-caps text-[9px] uppercase tracking-wider bg-surface-container px-1.5 py-0.5 rounded text-on-surface-variant font-semibold">PRD F-08</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+                    Menjaga 100% daftar kedai favorit dan catatan sensory cupping tersimpan di browser lokal Anda tanpa pelacakan analitik eksternal.
+                  </p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0 mt-1">
+<input checked="" class="sr-only peer" type="checkbox">
+<div class="w-11 h-6 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Preference Item 2: GPS Precision -->
+<div class="p-4 rounded-xl bg-surface-container-lowest flex items-start justify-between gap-4 shadow-xs border border-surface-container/70">
+<div class="flex items-start gap-3.5">
+<div class="p-2 rounded-xl bg-surface-container text-on-surface shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">near_me</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Izin Deteksi Lokasi Otomatis (GPS Precision)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+                    Menghitung radius kedai kopi manual brew terdekat dengan akurasi hingga 50 meter saat fitur ‘Temukan Selera’ dibuka.
+                  </p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0 mt-1">
+<input checked="" class="sr-only peer" type="checkbox">
+<div class="w-11 h-6 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Preference Item 3: Coffee Roastery Dispatch -->
+<div class="p-4 rounded-xl bg-surface-container-lowest flex items-start justify-between gap-4 shadow-xs border border-surface-container/70">
+<div class="flex items-start gap-3.5">
+<div class="p-2 rounded-xl bg-surface-container text-on-surface shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">notifications_active</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Notifikasi Rekomendasi Kedai Baru</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+                    Terima kurasi mingguan micro-roastery lokal dan kedatangan single-origin beans langka langsung ke email Anda.
+                  </p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0 mt-1">
+<input checked="" class="sr-only peer" type="checkbox">
+<div class="w-11 h-6 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+<!-- Technical Metadata Footer -->
+<div class="p-4 rounded-xl bg-surface-container flex flex-wrap items-center justify-between gap-3 text-on-surface-variant">
+<div class="flex items-center gap-2 font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px]">info</span>
+<span class="">Versi Arsitektur Mesin: <strong class="font-semibold text-on-surface">SCA-Kernel v2.4-id</strong></span>
+</div>
+<button class="font-label-sm text-label-sm text-secondary hover:underline font-semibold" onclick="alert('Cache penelusuran lokal berhasil dibersihkan.')" type="button">
+              Bersihkan Cache Penelusuran Lokal
+            </button>
+</div>
+</div>
+</section>
+</div>
+<!-- Bottom Global Sticky Bar on Mobile (Quick Confirm) -->
+
+</div>
+</main>
+<!-- Logout Confirmation Dialog Modal -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-primary-container/60 backdrop-blur-xs transition-opacity duration-200" id="logoutModal">
+<div class="bg-surface rounded-2xl max-w-md w-full p-6 shadow-2xl flex flex-col gap-5 border border-surface-container-highest">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-error-container text-on-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">logout</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Konfirmasi Keluar</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sesi akun Aditya S. akan diakhiri</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+      Apakah Anda yakin ingin keluar dari CafeMatch? Seluruh daftar favorit yang tersimpan pada penyimpanan lokal browser Anda tetap aman.
+    </p>
+<div class="flex items-center justify-end gap-3 pt-2">
+<button class="px-4 py-2.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors" onclick="closeLogoutModal()" type="button">
+        Tetap Masuk
+      </button>
+<button class="px-5 py-2.5 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md hover:bg-secondary/90 transition-colors shadow-xs" onclick="executeLogout()" type="button">
+        Ya, Keluar Sesi
+      </button>
+</div>
+</div>
+</div>
+<!-- Password Change Modal -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-primary-container/60 backdrop-blur-xs transition-opacity duration-200" id="passwordModal">
+<div class="bg-surface rounded-2xl max-w-lg w-full p-6 shadow-2xl flex flex-col gap-5 border border-surface-container-highest">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-on-surface shrink-0">
+<span class="material-symbols-outlined text-[22px]">key</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Pembaruan Kata Sandi</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Gunakan minimal 8 karakter dengan kombinasi angka &amp; simbol</span>
+</div>
+</div>
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface" onclick="closePasswordModal()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<form class="flex flex-col gap-4" onsubmit="event.preventDefault(); closePasswordModal(); triggerSaveNotification();">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Kata Sandi Saat Ini</label>
+<input class="w-full px-3.5 py-2 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-on-surface shadow-xs" placeholder="••••••••••••" required="" type="password">
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Kata Sandi Baru</label>
+<input class="w-full px-3.5 py-2 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-on-surface shadow-xs" placeholder="••••••••••••" required="" type="password">
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Konfirmasi Kata Sandi Baru</label>
+<input class="w-full px-3.5 py-2 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-on-surface shadow-xs" placeholder="••••••••••••" required="" type="password">
+</div>
+<div class="flex items-center justify-end gap-3 pt-3">
+<button class="px-4 py-2 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md" onclick="closePasswordModal()" type="button">
+          Batal
+        </button>
+<button class="px-5 py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md shadow-sm" type="submit">
+          Perbarui Kata Sandi
+        </button>
+</div>
+</form>
+</div>
+</div>
+<script>
+  function triggerSaveNotification() {
+    const toast = document.getElementById('saveToast');
+    if (toast) {
+      toast.classList.remove('hidden');
+      toast.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      setTimeout(() => {
+        closeToast();
+      }, 5000);
+    }
+  }
+
+  function closeToast() {
+    const toast = document.getElementById('saveToast');
+    if (toast) {
+      toast.classList.add('hidden');
+    }
+  }
+
+  function resetFormState() {
+    const toast = document.getElementById('saveToast');
+    if (toast) toast.classList.add('hidden');
+  }
+
+  function openLogoutModal() {
+    const modal = document.getElementById('logoutModal');
+    if (modal) modal.classList.remove('hidden');
+  }
+
+  function closeLogoutModal() {
+    const modal = document.getElementById('logoutModal');
+    if (modal) modal.classList.add('hidden');
+  }
+
+  function executeLogout() {
+    closeLogoutModal();
+    alert('Sesi berhasil diakhiri secara aman. Anda dapat masuk kembali kapan saja.');
+  }
+
+  function terminateOtherSessions() {
+    alert('Berhasil mengakhiri sesi di perangkat seluler lain. Hanya sesi saat ini yang tetap aktif.');
+  }
+
+  function openPasswordModal() {
+    const modal = document.getElementById('passwordModal');
+    if (modal) modal.classList.remove('hidden');
+  }
+
+  function closePasswordModal() {
+    const modal = document.getElementById('passwordModal');
+    if (modal) modal.classList.add('hidden');
+  }
+</script>
+
+
+
+
+</body></html>

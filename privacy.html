@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#fbf9f5" />
+    <title>Kebijakan Privasi — CafeMatch</title>
+    <style>
+      body { max-width: 760px; margin: 0 auto; padding: 48px 22px; color: #271f1b; background: #fbf9f5; font: 16px/1.75 'Plus Jakarta Sans', sans-serif; }
+      h1, h2 { font-family: 'Playfair Display', Georgia, serif; }
+      h1 { font-size: 40px; line-height: 1.15; }
+      h2 { margin-top: 32px; font-size: 24px; }
+      a { color: #97472e; }
+      .back { font-size: 14px; }
+    </style>
+  </head>
+  <body>
+    <a class="back" href="/">← Kembali ke CafeMatch</a>
+    <h1>Kebijakan Privasi</h1>
+    <p>CafeMatch adalah demo sistem pakar rekomendasi kafe di Kota Semarang. Mesin inferensi dan snapshot basis pengetahuan berjalan di browser.</p>
+    <h2>Data yang disimpan di perangkat</h2>
+    <p>Browser menyimpan preferensi konsultasi dan kafe favorit di local storage. Koordinat lokasi perangkat tidak disimpan. Hapus data tersimpan melalui pengaturan penyimpanan situs di browser.</p>
+    <h2>Pemrosesan lokal</h2>
+    <p>CafeMatch tidak menggunakan Google Maps atau Places API. Peta dibuat dengan Leaflet dan React Leaflet, sedangkan peta dasarnya memuat tile dari server OpenStreetMap. Permintaan tile dikirim dari browser dan dapat menyertakan alamat IP serta bagian peta yang diminta. Lihat <a href="https://operations.osmfoundation.org/policies/tiles/">kebijakan penggunaan tile OpenStreetMap</a>.</p>
+    <p>Akses lokasi perangkat bersifat opsional. Browser hanya meminta izin setelah pengguna menekan tombol “Gunakan lokasi saya”. Koordinat dipakai sementara di browser untuk menentukan titik tengah peta dan menghitung jarak; koordinat tidak disimpan atau dikirim ke server aplikasi. Geolocation memerlukan izin browser dan konteks aman seperti HTTPS atau localhost.</p>
+    <p>Basis pengetahuan kafe adalah snapshot statis. Tautan sumber, termasuk Google Maps dan direktori tempat, hanya dibuka bila dipilih pengguna; situs tujuan dapat menerima data koneksi sesuai kebijakannya sendiri.</p>
+    <h2>Sumber data kafe</h2>
+    <p>Basis pengetahuan memadukan snapshot OpenStreetMap, Direktori Kota Semarang, SemarangBawah, dan listing Google Maps yang ditautkan pada setiap tempat. © OpenStreetMap contributors. Lisensi ODbL 1.0 berlaku pada data OpenStreetMap; informasi atribusi tersedia di <a href="https://www.openstreetmap.org/copyright">OpenStreetMap Copyright and License</a>. Data fasilitas atau jam dapat tidak lengkap maupun kedaluwarsa.</p>
+    <h2>Kontak</h2>
+    <p>Untuk pertanyaan mengenai halaman ini, hubungi pengelola aplikasi melalui kanal dukungan tempat aplikasi ini dipublikasikan.</p>
+  </body>
+</html>

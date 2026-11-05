@@ -1,0 +1,724 @@
+<!DOCTYPE html><html class="h-full" lang="id"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{height:100%;margin:0;padding:0;}body{overscroll-behavior:none;}}::-webkit-scrollbar{width:6px;height:6px;}::-webkit-scrollbar-thumb{background:#d1c4c0;border-radius:4px;}::-webkit-scrollbar-track{background:transparent;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"outline-variant":"#d1c4c0","on-surface-variant":"#4e4542","surface-container-lowest":"#ffffff","on-secondary-container":"#772f18","error":"#ba1a1a","tertiary-fixed-dim":"#bbcbbb","tertiary-container":"#111e15","on-background":"#1b1c1a","surface-bright":"#fbf9f5","secondary-container":"#fe997a","on-primary":"#ffffff","on-tertiary-fixed":"#111e15","primary-fixed":"#ede0dc","background":"#fbf9f5","primary-container":"#201a18","surface-variant":"#e4e2de","on-surface":"#1b1c1a","surface-container":"#efeeea","secondary":"#97472e","inverse-on-surface":"#f2f0ed","surface-tint":"#655c5a","on-primary-container":"#8c827e","surface":"#fbf9f5","secondary-fixed":"#ffdbd0","inverse-primary":"#d0c4c0","tertiary":"#000000","on-tertiary-fixed-variant":"#3c4a3e","secondary-fixed-dim":"#ffb59f","on-secondary-fixed":"#3a0a00","on-error":"#ffffff","on-secondary":"#ffffff","on-error-container":"#93000a","tertiary-fixed":"#d6e7d7","surface-container-low":"#f5f3ef","error-container":"#ffdad6","primary-fixed-dim":"#d0c4c0","outline":"#807571","on-tertiary-container":"#78887a","on-primary-fixed-variant":"#4d4542","surface-container-high":"#eae8e4","surface-container-highest":"#e4e2de","primary":"#000000","on-tertiary":"#ffffff","on-secondary-fixed-variant":"#793019","surface-dim":"#dbdad6","on-primary-fixed":"#201a18","inverse-surface":"#30312e"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin":"3rem","gutter":"1.5rem","space-md":"1rem","space-xs":"0.25rem","margin-mobile":"1.25rem","space-sm":"0.5rem","space-xl":"2.5rem","space-lg":"1.5rem","gutter-sm":"1rem"},"fontFamily":{"label-sm":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"headline-lg-mobile":["Playfair Display"],"headline-sm":["Playfair Display"],"headline-lg":["Playfair Display"],"body-lg":["Plus Jakarta Sans"],"display-hero":["Playfair Display"],"display-hero-mobile":["Playfair Display"],"label-caps":["Plus Jakarta Sans"],"headline-md":["Playfair Display"],"body-md":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"]}}}};</script></head>
+<body class="h-full bg-background text-on-surface font-body-md antialiased flex overflow-hidden">
+<!-- 1. Persistent Left Navigation Sidebar (Consistent Dark Espresso Aesthetic Identical to SCREEN_2) -->
+<aside class="h-full shrink-0 z-40 bg-[#1a1412] text-[#fbf9f5] flex flex-col justify-between p-5 border-r border-[#2d221e] overflow-y-auto w-72">
+<div class="space-y-7">
+<!-- Brand Header -->
+<a class="flex items-center gap-3.5 group px-1" href="#">
+<div class="w-10 h-10 rounded-xl bg-secondary flex items-center justify-center text-on-secondary shadow-md shrink-0 ring-2 ring-secondary/30">
+<svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+<path d="M2,19H20V21H2V19M4,3H18A1,1 0 0,1 19,4V8A4,4 0 0,1 15,12H13V15.5C13,16.33 12.33,17 11.5,17H6.5C5.67,17 5,16.33 5,15.5V5H4V3M15,5H7V15H11.5V10H15A2,2 0 0,0 17,8V5H15M19,5V8A2,2 0 0,0 21,10H22A1,1 0 0,0 23,9V5A1,1 0 0,0 22,4H19V5Z"></path>
+</svg>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-[20px] text-white tracking-tight font-bold leading-tight">CafeMatch</span>
+<span class="text-[9px] text-[#ffb59f] font-label-caps uppercase tracking-wider font-semibold mt-0.5">CURATED COFFEE ENGINE</span>
+</div>
+</a>
+<!-- Vertical Navigation Menu -->
+<nav class="space-y-1.5"><!-- Temukan Selera -->
+<a class="flex items-center justify-between px-3.5 py-2.5 rounded-xl font-label-md text-xs text-[#c7beba] hover:text-white hover:bg-white/5 transition-all" data-path="temukan-selera" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[19px] text-[#a49995]">tune</span>
+<span class="font-medium">Temukan Selera</span>
+</div>
+</a>
+<!-- Hasil Rekomendasi -->
+<a class="flex items-center justify-between px-3.5 py-2.5 rounded-xl font-label-md text-xs text-[#c7beba] hover:text-white hover:bg-white/5 transition-all" data-path="hasil-rekomendasi" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[19px] text-[#a49995]">coffee</span>
+<span class="font-medium">Hasil Rekomendasi</span>
+</div>
+<span class="inline-flex items-center justify-center px-2 py-0.5 rounded-full bg-white/10 text-[#d0c4c0] font-label-caps text-[9px] font-bold tracking-wide">4 Kedai</span>
+</a>
+<!-- Favorit Saya (Active State: Terracotta Warm Accent) -->
+<a aria-current="page" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl font-label-md text-xs bg-secondary text-white font-semibold shadow-sm transition-all" data-path="favorit-saya" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[19px] text-white" style="font-variation-settings: &quot;FILL&quot; 1;">favorite</span>
+<span class="">Favorit Saya</span>
+</div>
+<span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-white/20 text-white font-label-caps text-[10px] font-bold" id="badge-count">3</span>
+</a>
+<!-- Logika Pakar -->
+<a class="flex items-center justify-between px-3.5 py-2.5 rounded-xl font-label-md text-xs text-[#c7beba] hover:text-white hover:bg-white/5 transition-all" data-path="tentang-logika-pakar" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[19px] text-[#a49995]">psychology</span>
+<span class="font-medium">Logika Pakar</span>
+</div>
+</a></nav>
+</div>
+<!-- Bottom Sidebar Profile & Meta Info -->
+<div class="pt-5 border-t border-[#2e231f] space-y-3.5">
+<!-- Location Picker Widget -->
+<div class="flex items-center justify-between px-3 py-2 rounded-xl bg-[#231b18] border border-[#3b2e29]">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-[17px] text-[#fe997a] shrink-0">location_on</span>
+<span class="font-label-sm text-xs text-white font-medium truncate">Senopati, Jaksel</span>
+</div>
+<button class="font-label-caps text-[10px] text-[#fe997a] hover:text-[#ffb59f] cursor-pointer font-bold uppercase shrink-0 transition-colors" type="button">Ubah</button>
+</div>
+<!-- Engine Status Badge -->
+<div class="flex items-center justify-between px-2 text-[10.5px] text-[#a49995]">
+<div class="flex items-center gap-2">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+</span>
+<span class="font-medium text-[#dcd4d0]">SCA Engine v2.4 • Online</span>
+</div>
+</div>
+<!-- User Profile Info -->
+<div class="flex items-center justify-between px-2 pt-1.5 border-t border-[#2a201c]">
+<div class="flex items-center gap-2.5 min-w-0">
+<img alt="Aditya S." class="w-8 h-8 rounded-full object-cover ring-1 ring-white/20 shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCexAJ6KuWAczyKTGH5JpuP8E3vwVJckzeNCEm3IyhSRmiLRRjKe2o2kiaVDoSipJ5FwebXxJ3mLylOiqR5wxjhqgy6l6MEW5W5jiYRIoGyz_Hiq7DN3NUAiD-pRN4dg3kstq86jvuTdxJQiVN_zv4zPhbULcvji1pE4yiyMBWioehTHTi4WxLrh7sjr0DuW1JHv1TOj5xHwGPgPJhOaX4nbp8t7nHMF7qcIcyk3Xku">
+<div class="flex flex-col text-left min-w-0">
+<span class="font-label-sm text-xs font-semibold text-white leading-tight truncate">Aditya S.</span>
+<span class="text-[10px] text-[#a49995] leading-none truncate">Q-Grader Enthusiast</span>
+</div>
+</div>
+<button aria-label="Pengaturan Akun" class="p-1.5 rounded-lg text-[#a49995] hover:text-white hover:bg-white/5 transition-colors shrink-0">
+<span class="material-symbols-outlined text-[17px]">settings</span>
+</button>
+</div>
+</div>
+</aside>
+<!-- 2. Main Content Area (Spacious Workspace) -->
+<main class="flex-1 h-full overflow-y-auto bg-background flex flex-col">
+<!-- Top Subheader & Filter Control Toolbar (Sticky Top) -->
+<header class="sticky top-0 z-20 bg-background/95 backdrop-blur-md border-b border-surface-container-high px-5 sm:px-8 pt-5 pb-4 space-y-4">
+<!-- Breadcrumbs & Quick Subheader Bar -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div>
+<div class="flex items-center gap-2 text-xs text-outline font-label-md mb-1">
+<span class="">Workspace</span>
+<span class="">/</span>
+<span class="text-secondary font-semibold">Koleksi Kedai Favorit</span>
+</div>
+<div class="flex items-baseline gap-3">
+<h1 class="font-headline-md text-2xl sm:text-[26px] font-bold tracking-tight text-primary">Koleksi Kedai Favorit Saya</h1>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-bold bg-secondary-fixed text-on-secondary-fixed shrink-0" id="stat-total-count">3 Kedai Tersimpan</span>
+</div>
+<p class="text-xs text-on-surface-variant mt-1">Kurasi kedai kopi mandiri yang tersimpan di browser Anda dengan kalkulasi jarak GPS real-time.</p>
+</div>
+<!-- Quick Stat Badges -->
+<div class="flex items-center gap-2 self-start sm:self-auto shrink-0">
+<div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-lowest border border-outline-variant/70 text-on-surface text-xs shadow-2xs font-medium">
+<span class="material-symbols-outlined text-[16px] text-secondary">radar</span>
+<span class="" id="stat-closest-pill">Terdekat: 800 m</span>
+</div>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-lowest border border-outline-variant/70 hover:bg-surface-container text-xs font-label-md text-on-surface transition-colors shadow-2xs font-medium cursor-pointer" onclick="toggleGuideCard()" title="Prinsip Kurasi Mandiri" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">help</span>
+<span class="hidden sm:inline">Prinsip Kurasi</span>
+</button>
+</div>
+</div>
+<!-- Search & Sort Controls Toolbar -->
+<div class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3 pt-1">
+<!-- Search Bar -->
+<div class="relative flex-1 min-w-[260px]">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[18px] text-outline pointer-events-none">search</span>
+<input class="w-full bg-surface-container-lowest border border-outline-variant/70 rounded-lg pl-9 pr-8 py-2 text-xs text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-secondary transition-all shadow-2xs" id="app-search" oninput="handleSearch(this.value)" placeholder="Cari dalam favorit (nama kedai, menu, notes)..." type="text">
+<button class="hidden absolute right-2.5 top-1/2 -translate-y-1/2 text-outline hover:text-on-surface text-xs" id="clear-search" onclick="clearSearch()" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<!-- Sort & Layout Controls -->
+<div class="flex items-center gap-2 shrink-0 justify-between md:justify-end">
+<button class="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg border border-outline-variant/70 bg-surface-container-lowest hover:bg-surface-container text-xs font-medium text-on-surface transition-colors cursor-pointer shadow-2xs" id="filter-24jam" onclick="toggleFilter24Jam()" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">schedule</span>
+<span class="">Buka 24 Jam</span>
+<span class="w-2 h-2 rounded-full bg-outline-variant transition-colors" id="toggle-indicator"></span>
+</button>
+<!-- Sort Select -->
+<div class="relative flex items-center bg-surface-container-lowest rounded-lg pl-3 pr-2 py-1.5 transition-colors"><label for="sort-select" class="text-xs font-medium text-outline mr-2 shrink-0 select-none">Urutkan:</label><select class="bg-transparent text-xs font-semibold text-on-surface focus:outline-none cursor-pointer pr-5 py-0.5 appearance-none border-0 p-0 shadow-none ring-0 focus:ring-0" id="sort-select" style="background-image: none;"><option value="distance">Jarak Terdekat (GPS)</option><option value="recent">Waktu Ditambahkan</option><option value="name">Nama Kedai (A-Z)</option></select><span class="material-symbols-outlined text-[18px] text-outline pointer-events-none absolute right-1 top-1/2 -translate-y-1/2">expand_more</span></div>
+<!-- View Toggle Buttons -->
+<div class="flex items-center p-0.5 bg-surface-container rounded-lg border border-outline-variant/60" role="group">
+<button aria-label="Grid View" class="p-1.5 rounded-md transition-colors cursor-pointer bg-surface-container-lowest text-on-surface shadow-2xs" id="btn-grid-view" onclick="setViewMode('grid')" title="Tampilan Grid" type="button">
+<span class="material-symbols-outlined text-[18px] block">grid_view</span>
+</button>
+<button aria-label="List View" class="p-1.5 rounded-md hover:text-on-surface transition-colors cursor-pointer text-outline" id="btn-list-view" onclick="setViewMode('list')" title="Tampilan List" type="button">
+<span class="material-symbols-outlined text-[18px] block">view_list</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<!-- Workspace Content Container -->
+<div class="p-5 sm:p-8 flex-1 flex flex-col justify-between max-w-7xl w-full">
+<div>
+<!-- SaaS Privacy Notice Banner -->
+<div class="mb-5 bg-surface-container-low border border-surface-container-high rounded-xl flex items-center justify-between gap-3 px-4 py-2.5 transition-all text-xs" id="kurasi-banner">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">shield</span>
+<span class="font-semibold text-on-surface">Privasi Lokal 100%:</span>
+<span class="text-on-surface-variant">Seluruh data favorit dan catatan disimpan langsung di browser peramban tanpa profiling server komersial.</span>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<button class="font-semibold text-secondary hover:underline cursor-pointer text-xs" onclick="toggleGuideCard()" type="button">Detail</button>
+<button class="text-outline hover:text-on-surface p-0.5 cursor-pointer ml-1" onclick="dismissBanner()" title="Tutup banner" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+</div>
+<!-- Collapsible Detail Info Box -->
+<div class="hidden mb-6 p-4 bg-surface-container-lowest border border-secondary/30 rounded-xl" id="kurasi-detail-box">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">menu_book</span>
+<h3 class="font-headline-sm text-base font-bold text-on-surface">Panduan Kurasi &amp; Privasi Lokal</h3>
+</div>
+<button class="text-outline hover:text-on-surface cursor-pointer" onclick="toggleGuideCard()" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+Koleksi ini sepenuhnya dikontrol oleh Anda. Data favorit dan catatan personal disimpan langsung dalam session lokal peramban. Fitur penentu jarak memperhitungkan radius GPS real-time secara asinkron tanpa mentransmisikan riwayat lokasi ke server pihak ketiga.
+</p>
+</div>
+<!-- Favorites Grid / List Area -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="favorites-container">
+<!-- Card 1: Kroma Atelier & Roastery -->
+<article class="app-card group bg-surface-container-lowest border border-outline-variant/60 hover:border-secondary/50 rounded-xl p-0 overflow-hidden flex flex-col transition-all duration-200 hover:shadow-md shadow-2xs" data-card-id="card-1" data-distance="800" data-name="Kroma Atelier &amp; Roastery" data-tags="v60 espresso acidity cerah geisha manual tenang" data-timestamp="1728470400">
+<!-- Media Cover Header -->
+<div class="relative w-full h-44 bg-surface-container-highest overflow-hidden">
+<img alt="Kroma Atelier Pour over coffee" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD46f3MzuZpN1HBqOKNrvZS7rpDQK_p0CRCZUk0RrTTksCUqptqA6yvp1PeEGCb-nrCLT5neU_OVnQ2XyzQA7N04HaFyMe7THKkAb8HzrIsjbB79CGcH8Q-z5O3cb-wwZbM-uKwYB2lzS_avN_zQbGFz4RWZYUB4-76oeza4lygohMM4YmUenjOJff_oIQmAbX-s-_FE6vjOAaYXn6RPNOMxhOLf8-ruRNDaT15ECu4">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 pointer-events-none"></div>
+<div class="absolute top-3 left-3">
+<span class="px-2.5 py-0.5 rounded-md bg-surface/90 backdrop-blur-xs text-[10px] font-bold text-secondary tracking-wide uppercase shadow-2xs">Origin Lab</span>
+</div>
+<div class="absolute top-3 right-3">
+<button aria-label="Favorit Aktif" class="w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed hover:bg-error-container hover:text-error flex items-center justify-center shadow-sm transition-transform active:scale-90 cursor-pointer" onclick="removeFavorite('card-1', 'Kroma Atelier &amp; Roastery')" title="Favorit (Klik untuk hapus)" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary" style="font-variation-settings: &quot;FILL&quot; 1;">favorite</span>
+</button>
+</div>
+<div class="absolute bottom-2.5 left-3 right-3 flex items-center justify-between text-white text-xs">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-black/60 backdrop-blur-xs font-semibold">
+<span class="material-symbols-outlined text-[14px] text-secondary-container">near_me</span>
+<span class="">800 m dari posisi Anda</span>
+</span>
+</div>
+</div>
+<!-- Card Body -->
+<div class="p-4 sm:p-5 flex-1 flex flex-col justify-between gap-3.5">
+<div>
+<div class="flex items-start justify-between gap-2">
+<h2 class="font-headline-sm text-base font-bold text-primary line-clamp-1 group-hover:text-secondary transition-colors">Kroma Atelier &amp; Roastery</h2>
+</div>
+<p class="text-xs text-on-surface-variant line-clamp-1 mt-0.5">Jl. Cikajang No. 24, Petogogan, Kebayoran Baru</p>
+<div class="flex flex-wrap items-center gap-1.5 mt-2.5">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-600/10 text-emerald-700 font-semibold text-[11px]">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>Buka • 08:00 - 22:00
+</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container text-on-surface-variant text-[11px] font-medium">V60 • Single Origin</span>
+<span class="px-2 py-0.5 rounded-md bg-secondary-fixed/50 text-on-secondary-fixed text-[11px] font-semibold">Tenang &amp; Nyaman</span>
+</div>
+</div>
+<!-- Personal Note Pill -->
+<div class="bg-surface-container-low border border-surface-container-high rounded-lg p-2.5 flex flex-col gap-1.5 transition-colors">
+<div class="flex items-center justify-between text-[11px]">
+<span class="font-medium text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-secondary">note_alt</span> Catatan Pribadi
+</span>
+<span class="text-outline text-[10px]" id="char-count-card-1">112/140</span>
+</div>
+<div class="group/note" id="note-view-card-1">
+<p class="text-xs text-on-surface italic line-clamp-2 leading-relaxed">“<span class="" id="note-text-card-1">Barista ramah banget, beans Geisha mereka wajib coba pas pagi hari. Colokan banyak di pojok kiri.</span>”</p>
+<div class="flex justify-end mt-1">
+<button class="inline-flex items-center gap-1 text-[11px] font-semibold text-secondary hover:underline cursor-pointer" onclick="toggleEditNote('card-1')" type="button">
+<span class="material-symbols-outlined text-[13px]">edit</span> Sunting
+</button>
+</div>
+</div>
+<div class="hidden flex-col gap-2" id="note-edit-card-1">
+<textarea class="w-full bg-surface-container-lowest border border-surface-container-high rounded p-2 text-xs text-on-surface focus:outline-none focus:ring-1 focus:ring-secondary resize-none" id="textarea-card-1" maxlength="140" oninput="updateCharCount('card-1')" rows="2">Barista ramah banget, beans Geisha mereka wajib coba pas pagi hari. Colokan banyak di pojok kiri.</textarea>
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2 py-0.5 rounded text-[11px] text-outline hover:text-on-surface bg-surface-container cursor-pointer" onclick="cancelEditNote('card-1')" type="button">Batal</button>
+<button class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-primary text-on-primary hover:opacity-90 cursor-pointer" onclick="saveEditNote('card-1')" type="button">Simpan</button>
+</div>
+</div>
+</div>
+<!-- Actions Footer -->
+<div class="pt-2 border-t border-surface-container flex items-center justify-between gap-2">
+<span class="text-[11px] text-outline">Disimpan 9 Okt</span>
+<div class="flex items-center gap-1.5">
+<button class="p-1.5 rounded-md hover:bg-error-container hover:text-error text-outline transition-colors cursor-pointer" onclick="removeFavorite('card-1', 'Kroma Atelier &amp; Roastery')" title="Hapus dari Favorit" type="button">
+<span class="material-symbols-outlined text-[17px]">delete_outline</span>
+</button>
+<a class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary text-xs font-semibold transition-colors" href="https://maps.google.com/?q=Kroma+Atelier+Roastery+Jakarta" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[15px]">directions</span>
+<span class="">Peta</span>
+</a>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 2: Tanatap Artisan Coffee Space -->
+<article class="app-card group bg-surface-container-lowest border border-outline-variant/60 hover:border-secondary/50 rounded-xl p-0 overflow-hidden flex flex-col transition-all duration-200 hover:shadow-md shadow-2xs" data-card-id="card-2" data-distance="1400" data-name="Tanatap Artisan Coffee Space" data-tags="v60 pour over suasana tenang produktif 24jam buka 24 jam outdoor" data-timestamp="1728124800">
+<!-- Media Cover Header -->
+<div class="relative w-full h-44 bg-surface-container-highest overflow-hidden">
+<img alt="Tanatap coffee garden" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBInjGBmqDgKVD7sR2RtLGa9jRVCP7SHO45W0mv7fwVQRQAydOjFVS60f6B_iDZbyB0QkBDPFSx18BZnb9xunuLFCN_wu3fP9n7Q0gVCw5PNHOShKJVl0bmWresuVqOjvJvCgX38dRBpO2XU5DnJ2Mjp__kSSnFNkJAzXg70NyEMyk4mrDL_k9-vIiE1xbYhcsowvIGqvmJEfpW2cWuKh2lw6jx039IgFn1rYj2-ZF4">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 pointer-events-none"></div>
+<div class="absolute top-3 left-3">
+<span class="px-2.5 py-0.5 rounded-md bg-surface/90 backdrop-blur-xs text-[10px] font-bold text-secondary tracking-wide uppercase shadow-2xs">Biophilic Space</span>
+</div>
+<div class="absolute top-3 right-3">
+<button aria-label="Favorit Aktif" class="w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed hover:bg-error-container hover:text-error flex items-center justify-center shadow-sm transition-transform active:scale-90 cursor-pointer" onclick="removeFavorite('card-2', 'Tanatap Artisan Coffee Space')" title="Favorit (Klik untuk hapus)" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary" style="font-variation-settings: &quot;FILL&quot; 1;">favorite</span>
+</button>
+</div>
+<div class="absolute bottom-2.5 left-3 right-3 flex items-center justify-between text-white text-xs">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-black/60 backdrop-blur-xs font-semibold">
+<span class="material-symbols-outlined text-[14px] text-secondary-container">near_me</span>
+<span class="">1.4 km dari posisi Anda</span>
+</span>
+</div>
+</div>
+<!-- Card Body -->
+<div class="p-4 sm:p-5 flex-1 flex flex-col justify-between gap-3.5">
+<div>
+<div class="flex items-start justify-between gap-2">
+<h2 class="font-headline-sm text-base font-bold text-primary line-clamp-1 group-hover:text-secondary transition-colors">Tanatap Artisan Coffee Space</h2>
+</div>
+<p class="text-xs text-on-surface-variant line-clamp-1 mt-0.5">Jl. Kyai Maja No. 39, Kebayoran Baru</p>
+<div class="flex flex-wrap items-center gap-1.5 mt-2.5">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-600/10 text-emerald-700 font-semibold text-[11px]">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>Buka • 24 Jam
+</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container text-on-surface-variant text-[11px] font-medium">Kalita Wave Artisan</span>
+<span class="px-2 py-0.5 rounded-md bg-secondary-fixed/50 text-on-secondary-fixed text-[11px] font-semibold">Outdoor Rindang</span>
+</div>
+</div>
+<!-- Personal Note Pill -->
+<div class="bg-surface-container-low border border-surface-container-high rounded-lg p-2.5 flex flex-col gap-1.5 transition-colors">
+<div class="flex items-center justify-between text-[11px]">
+<span class="font-medium text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-secondary">note_alt</span> Catatan Pribadi
+</span>
+<span class="text-outline text-[10px]" id="char-count-card-2">69/140</span>
+</div>
+<div class="group/note" id="note-view-card-2">
+<p class="text-xs text-on-surface italic line-clamp-2 leading-relaxed">“<span class="" id="note-text-card-2">Tempat outdoor asri kalau sore jam 4. Cocok buat ngetik artikel.</span>”</p>
+<div class="flex justify-end mt-1">
+<button class="inline-flex items-center gap-1 text-[11px] font-semibold text-secondary hover:underline cursor-pointer" onclick="toggleEditNote('card-2')" type="button">
+<span class="material-symbols-outlined text-[13px]">edit</span> Sunting
+</button>
+</div>
+</div>
+<div class="hidden flex-col gap-2" id="note-edit-card-2">
+<textarea class="w-full bg-surface-container-lowest border border-surface-container-high rounded p-2 text-xs text-on-surface focus:outline-none focus:ring-1 focus:ring-secondary resize-none" id="textarea-card-2" maxlength="140" oninput="updateCharCount('card-2')" rows="2">Tempat outdoor asri kalau sore jam 4. Cocok buat ngetik artikel.</textarea>
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2 py-0.5 rounded text-[11px] text-outline hover:text-on-surface bg-surface-container cursor-pointer" onclick="cancelEditNote('card-2')" type="button">Batal</button>
+<button class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-primary text-on-primary hover:opacity-90 cursor-pointer" onclick="saveEditNote('card-2')" type="button">Simpan</button>
+</div>
+</div>
+</div>
+<!-- Actions Footer -->
+<div class="pt-2 border-t border-surface-container flex items-center justify-between gap-2">
+<span class="text-[11px] text-outline">Disimpan 5 Okt</span>
+<div class="flex items-center gap-1.5">
+<button class="p-1.5 rounded-md hover:bg-error-container hover:text-error text-outline transition-colors cursor-pointer" onclick="removeFavorite('card-2', 'Tanatap Artisan Coffee Space')" title="Hapus dari Favorit" type="button">
+<span class="material-symbols-outlined text-[17px]">delete_outline</span>
+</button>
+<a class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary text-xs font-semibold transition-colors" href="https://maps.google.com/?q=Tanatap+Artisan+Coffee+Kebayoran" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[15px]">directions</span>
+<span class="">Peta</span>
+</a>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 3: First Crack Coffee -->
+<article class="app-card group bg-surface-container-lowest border border-outline-variant/60 hover:border-secondary/50 rounded-xl p-0 overflow-hidden flex flex-col transition-all duration-200 hover:shadow-md shadow-2xs" data-card-id="card-3" data-distance="2900" data-name="First Crack Coffee" data-tags="cold brew single origin anaerob colombia cupping bar" data-timestamp="1727481600">
+<!-- Media Cover Header -->
+<div class="relative w-full h-44 bg-surface-container-highest overflow-hidden">
+<img alt="First Crack Coffee" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQNJXgbcp7LOWoxaoudeYNdtpyyTk4JwMpFhsWMkrUM5rYbEQdtFKXAW6B_2Bja4xflJgXZ5kBxAz4YCbHcqYdNChd7RwIv1HHeIJ-XlthB7o94FS0ma7Z345EQZUXmRgMedoxTaeX9uHgeQq6imouNPVX8_18Klcrk1n_xDAatStOvVzVf_jAqYnOcGsFLu4S0Oc_lvKpFSB7pglU6qPuHNEysgbFta47-IjwY66h">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 pointer-events-none"></div>
+<div class="absolute top-3 left-3">
+<span class="px-2.5 py-0.5 rounded-md bg-surface/90 backdrop-blur-xs text-[10px] font-bold text-secondary tracking-wide uppercase shadow-2xs">Cupping Bar</span>
+</div>
+<div class="absolute top-3 right-3">
+<button aria-label="Favorit Aktif" class="w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed hover:bg-error-container hover:text-error flex items-center justify-center shadow-sm transition-transform active:scale-90 cursor-pointer" onclick="removeFavorite('card-3', 'First Crack Coffee')" title="Favorit (Klik untuk hapus)" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary" style="font-variation-settings: &quot;FILL&quot; 1;">favorite</span>
+</button>
+</div>
+<div class="absolute bottom-2.5 left-3 right-3 flex items-center justify-between text-white text-xs">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-black/60 backdrop-blur-xs font-semibold">
+<span class="material-symbols-outlined text-[14px] text-secondary-container">near_me</span>
+<span class="">2.9 km dari posisi Anda</span>
+</span>
+</div>
+</div>
+<!-- Card Body -->
+<div class="p-4 sm:p-5 flex-1 flex flex-col justify-between gap-3.5">
+<div>
+<div class="flex items-start justify-between gap-2">
+<h2 class="font-headline-sm text-base font-bold text-primary line-clamp-1 group-hover:text-secondary transition-colors">First Crack Coffee</h2>
+</div>
+<p class="text-xs text-on-surface-variant line-clamp-1 mt-0.5">Jl. Bumi No. 10, Rawa Barat, Kebayoran Baru</p>
+<div class="flex flex-wrap items-center gap-1.5 mt-2.5">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-600/10 text-emerald-700 font-semibold text-[11px]">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>Buka • 07:00 - 23:00
+</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container text-on-surface-variant text-[11px] font-medium">Cold Brew &amp; Single Origin</span>
+<span class="px-2 py-0.5 rounded-md bg-secondary-fixed/50 text-on-secondary-fixed text-[11px] font-semibold">Fermentasi Anaerob</span>
+</div>
+</div>
+<!-- Personal Note Pill -->
+<div class="bg-surface-container-low border border-surface-container-high rounded-lg p-2.5 flex flex-col gap-1.5 transition-colors">
+<div class="flex items-center justify-between text-[11px]">
+<span class="font-medium text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-secondary">note_alt</span> Catatan Pribadi
+</span>
+<span class="text-outline text-[10px]" id="char-count-card-3">74/140</span>
+</div>
+<div class="group/note" id="note-view-card-3">
+<p class="text-xs text-on-surface italic line-clamp-2 leading-relaxed">“<span class="" id="note-text-card-3">Belum sempat coba filter bean Colombia mereka, rencanakan balik lagi.</span>”</p>
+<div class="flex justify-end mt-1">
+<button class="inline-flex items-center gap-1 text-[11px] font-semibold text-secondary hover:underline cursor-pointer" onclick="toggleEditNote('card-3')" type="button">
+<span class="material-symbols-outlined text-[13px]">edit</span> Sunting
+</button>
+</div>
+</div>
+<div class="hidden flex-col gap-2" id="note-edit-card-3">
+<textarea class="w-full bg-surface-container-lowest border border-surface-container-high rounded p-2 text-xs text-on-surface focus:outline-none focus:ring-1 focus:ring-secondary resize-none" id="textarea-card-3" maxlength="140" oninput="updateCharCount('card-3')" rows="2">Belum sempat coba filter bean Colombia mereka, rencanakan balik lagi.</textarea>
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2 py-0.5 rounded text-[11px] text-outline hover:text-on-surface bg-surface-container cursor-pointer" onclick="cancelEditNote('card-3')" type="button">Batal</button>
+<button class="px-2.5 py-0.5 rounded text-[11px] font-medium bg-primary text-on-primary hover:opacity-90 cursor-pointer" onclick="saveEditNote('card-3')" type="button">Simpan</button>
+</div>
+</div>
+</div>
+<!-- Actions Footer -->
+<div class="pt-2 border-t border-surface-container flex items-center justify-between gap-2">
+<span class="text-[11px] text-outline">Disimpan 28 Sep</span>
+<div class="flex items-center gap-1.5">
+<button class="p-1.5 rounded-md hover:bg-error-container hover:text-error text-outline transition-colors cursor-pointer" onclick="removeFavorite('card-3', 'First Crack Coffee')" title="Hapus dari Favorit" type="button">
+<span class="material-symbols-outlined text-[17px]">delete_outline</span>
+</button>
+<a class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary text-xs font-semibold transition-colors" href="https://maps.google.com/?q=First+Crack+Coffee+Bumi+Jakarta" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[15px]">directions</span>
+<span class="">Peta</span>
+</a>
+</div>
+</div>
+</div>
+</article>
+</div>
+<!-- Empty State Fallback -->
+<div class="hidden border border-dashed border-surface-container-high bg-surface-container-lowest rounded-2xl p-12 text-center flex-col items-center justify-center gap-4 my-8" id="empty-state-view">
+<div class="w-14 h-14 rounded-2xl bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[28px]">bookmark_border</span>
+</div>
+<div class="max-w-sm flex flex-col gap-1.5">
+<h2 class="font-headline-sm text-lg font-bold text-on-surface">Tidak Ada Kedai dalam Koleksi</h2>
+<p class="text-xs text-on-surface-variant leading-relaxed">
+Koleksi Anda masih kosong atau tidak ada kedai yang cocok dengan filter pencarian saat ini.
+</p>
+</div>
+<div class="flex items-center gap-2 pt-2">
+<button class="px-4 py-2 rounded-lg border border-surface-container-high text-xs font-medium text-on-surface hover:bg-surface-container cursor-pointer" onclick="clearSearch()" type="button">Reset Pencarian</button>
+<a class="px-4 py-2 rounded-lg bg-primary text-on-primary text-xs font-semibold hover:bg-primary-container inline-flex items-center gap-1.5" data-path="hasil-rekomendasi" href="#">
+<span class="">Eksplor Rekomendasi</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Bottom Utility Bar & Minimal Footer -->
+<div class="mt-12 pt-5 border-t border-surface-container-high flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-outline">
+<div class="flex items-center gap-4 text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">near_me</span>
+<span class="">Radius terdekat: <strong class="text-on-surface" id="bottom-stat-dist">800 m (Kroma Atelier)</strong></span>
+</div>
+<span class="text-outline-variant hidden sm:inline">•</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">cloud_done</span>
+<span class="">Sinkronisasi: <strong class="text-on-surface">Tersimpan Lokal</strong></span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-2.5 py-1 rounded-md border border-outline-variant/70 hover:bg-surface-container text-xs font-semibold text-secondary transition-colors cursor-pointer inline-flex items-center gap-1" onclick="showToast('Tautan kurasi disalin ke clipboard')" type="button">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span class="">Salin Tautan Koleksi</span>
+</button>
+<span class="text-outline-variant hidden sm:inline">•</span>
+<span class="">CafeMatch Engine v2.4</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Web App Toast Notification -->
+<div class="fixed bottom-6 right-6 z-50 transform transition-all duration-300 pointer-events-none flex items-center gap-2.5 px-4 py-2.5 rounded-lg bg-inverse-surface text-inverse-on-surface shadow-xl text-xs font-medium translate-y-20 opacity-0" id="toast">
+<span class="material-symbols-outlined text-[18px] text-secondary-container" id="toast-icon">check_circle</span>
+<span class="" id="toast-message">Tampilan grid diaktifkan</span>
+</div>
+<script>
+  let currentView = 'grid';
+  let filter24Active = false;
+
+  // Real-time Note Char Counter
+  function updateCharCount(cardId) {
+    const textarea = document.getElementById('textarea-' + cardId);
+    const counter = document.getElementById('char-count-' + cardId);
+    if (textarea && counter) {
+      counter.innerText = textarea.value.length + '/140';
+    }
+  }
+
+  // Toggle inline editing note
+  function toggleEditNote(cardId) {
+    const viewEl = document.getElementById('note-view-' + cardId);
+    const editEl = document.getElementById('note-edit-' + cardId);
+    const textarea = document.getElementById('textarea-' + cardId);
+    if (viewEl && editEl) {
+      viewEl.classList.add('hidden');
+      editEl.classList.remove('hidden');
+      editEl.classList.add('flex');
+      if (textarea) textarea.focus();
+    }
+  }
+
+  // Cancel edit note
+  function cancelEditNote(cardId) {
+    const viewEl = document.getElementById('note-view-' + cardId);
+    const editEl = document.getElementById('note-edit-' + cardId);
+    const noteText = document.getElementById('note-text-' + cardId);
+    const textarea = document.getElementById('textarea-' + cardId);
+    if (viewEl && editEl && noteText && textarea) {
+      textarea.value = noteText.innerText;
+      updateCharCount(cardId);
+      editEl.classList.add('hidden');
+      editEl.classList.remove('flex');
+      viewEl.classList.remove('hidden');
+    }
+  }
+
+  // Save edit note
+  function saveEditNote(cardId) {
+    const viewEl = document.getElementById('note-view-' + cardId);
+    const editEl = document.getElementById('note-edit-' + cardId);
+    const noteText = document.getElementById('note-text-' + cardId);
+    const textarea = document.getElementById('textarea-' + cardId);
+    
+    if (textarea && noteText) {
+      noteText.innerText = textarea.value.trim() || 'Tidak ada catatan.';
+    }
+    
+    if (viewEl && editEl) {
+      editEl.classList.add('hidden');
+      editEl.classList.remove('flex');
+      viewEl.classList.remove('hidden');
+    }
+
+    showToast('Catatan berhasil diperbarui');
+  }
+
+  // One-tap remove favorite
+  function removeFavorite(cardId, shopName) {
+    const card = document.querySelector('[data-card-id="' + cardId + '"]');
+    if (!card) return;
+
+    card.style.transition = 'all 0.25s cubic-bezier(0.4, 0, 0.2, 1)';
+    card.style.opacity = '0';
+    card.style.transform = 'scale(0.92)';
+
+    setTimeout(() => {
+      card.remove();
+      updateSavedCount();
+      showToast(shopName + ' dihapus dari favorit');
+    }, 250);
+  }
+
+  // Update counts & dynamic badges
+  function updateSavedCount() {
+    const container = document.getElementById('favorites-container');
+    const remainingCards = container.querySelectorAll('.app-card');
+    const totalCount = remainingCards.length;
+
+    const badge = document.getElementById('badge-count');
+    const statPill = document.getElementById('stat-total-count');
+    const emptyState = document.getElementById('empty-state-view');
+
+    if (badge) badge.innerText = totalCount;
+    if (statPill) statPill.innerText = totalCount + ' Kedai Tersimpan';
+
+    if (totalCount === 0) {
+      container.classList.add('hidden');
+      if (emptyState) {
+        emptyState.classList.remove('hidden');
+        emptyState.classList.add('flex');
+      }
+    }
+  }
+
+  // Toast feedback micro-interaction
+  function showToast(message) {
+    const toast = document.getElementById('toast');
+    const toastMsg = document.getElementById('toast-message');
+    if (!toast || !toastMsg) return;
+
+    toastMsg.innerText = message;
+    toast.classList.remove('translate-y-20', 'opacity-0');
+    toast.classList.add('translate-y-0', 'opacity-100');
+
+    setTimeout(() => {
+      toast.classList.remove('translate-y-0', 'opacity-100');
+      toast.classList.add('translate-y-20', 'opacity-0');
+    }, 2600);
+  }
+
+  // Layout View Switcher (Grid vs List)
+  function setViewMode(mode) {
+    currentView = mode;
+    const container = document.getElementById('favorites-container');
+    const btnGrid = document.getElementById('btn-grid-view');
+    const btnList = document.getElementById('btn-list-view');
+
+    if (mode === 'list') {
+      container.className = 'flex flex-col gap-4';
+      btnList.classList.add('bg-surface-container-lowest', 'text-on-surface', 'shadow-2xs');
+      btnList.classList.remove('text-outline');
+      btnGrid.classList.remove('bg-surface-container-lowest', 'text-on-surface', 'shadow-2xs');
+      btnGrid.classList.add('text-outline');
+
+      container.querySelectorAll('.app-card').forEach(card => {
+        card.classList.add('sm:flex-row');
+        const media = card.querySelector('.relative.w-full.h-44');
+        if (media) {
+          media.classList.remove('w-full', 'h-44');
+          media.classList.add('sm:w-60', 'sm:h-auto', 'w-full', 'h-44', 'shrink-0');
+        }
+      });
+      showToast('Tampilan daftar diaktifkan');
+    } else {
+      container.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6';
+      btnGrid.classList.add('bg-surface-container-lowest', 'text-on-surface', 'shadow-2xs');
+      btnGrid.classList.remove('text-outline');
+      btnList.classList.remove('bg-surface-container-lowest', 'text-on-surface', 'shadow-2xs');
+      btnList.classList.add('text-outline');
+
+      container.querySelectorAll('.app-card').forEach(card => {
+        card.classList.remove('sm:flex-row');
+        const media = card.querySelector('.sm\\:w-60');
+        if (media) {
+          media.className = 'relative w-full h-44 bg-surface-container-highest overflow-hidden';
+        }
+      });
+      showToast('Tampilan grid diaktifkan');
+    }
+  }
+
+  // Filter 24 Jam toggle
+  function toggleFilter24Jam() {
+    filter24Active = !filter24Active;
+    const indicator = document.getElementById('toggle-indicator');
+    const btn = document.getElementById('filter-24jam');
+    
+    if (filter24Active) {
+      indicator.classList.remove('bg-outline-variant');
+      indicator.classList.add('bg-secondary');
+      btn.classList.add('border-secondary', 'bg-secondary-fixed/30');
+      showToast('Menampilkan kedai buka 24 jam');
+    } else {
+      indicator.classList.remove('bg-secondary');
+      indicator.classList.add('bg-outline-variant');
+      btn.classList.remove('border-secondary', 'bg-secondary-fixed/30');
+      showToast('Filter 24 jam dimatikan');
+    }
+
+    applyFilterAndSearch();
+  }
+
+  // App Search within favorites
+  function handleSearch(query) {
+    const clearBtn = document.getElementById('clear-search');
+    if (clearBtn) {
+      if (query.trim().length > 0) clearBtn.classList.remove('hidden');
+      else clearBtn.classList.add('hidden');
+    }
+    applyFilterAndSearch();
+  }
+
+  function applyFilterAndSearch() {
+    const input = document.getElementById('app-search');
+    const q = (input ? input.value : '').toLowerCase().trim();
+    const container = document.getElementById('favorites-container');
+    const cards = container.querySelectorAll('.app-card');
+    const emptyState = document.getElementById('empty-state-view');
+    let visibleCount = 0;
+
+    cards.forEach(card => {
+      const name = (card.getAttribute('data-name') || '').toLowerCase();
+      const tags = (card.getAttribute('data-tags') || '').toLowerCase();
+      const noteEl = card.querySelector('[id^="note-text-"]');
+      const note = (noteEl ? noteEl.innerText : '').toLowerCase();
+
+      const matchesSearch = !q || name.includes(q) || tags.includes(q) || note.includes(q);
+      const matches24 = !filter24Active || tags.includes('24jam') || tags.includes('24 jam');
+
+      if (matchesSearch && matches24) {
+        card.style.display = '';
+        visibleCount++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    if (visibleCount === 0) {
+      emptyState.classList.remove('hidden');
+      emptyState.classList.add('flex');
+    } else {
+      emptyState.classList.add('hidden');
+      emptyState.classList.remove('flex');
+    }
+  }
+
+  function clearSearch() {
+    const input = document.getElementById('app-search');
+    if (input) {
+      input.value = '';
+      applyFilterAndSearch();
+    }
+  }
+
+  // Sort handling
+  document.getElementById('sort-select')?.addEventListener('change', function(e) {
+    const val = e.target.value;
+    const container = document.getElementById('favorites-container');
+    const cards = Array.from(container.querySelectorAll('.app-card'));
+
+    cards.sort((a, b) => {
+      if (val === 'distance') {
+        return parseInt(a.getAttribute('data-distance')) - parseInt(b.getAttribute('data-distance'));
+      } else if (val === 'recent') {
+        return parseInt(b.getAttribute('data-timestamp')) - parseInt(a.getAttribute('data-timestamp'));
+      } else if (val === 'name') {
+        return (a.getAttribute('data-name') || '').localeCompare(b.getAttribute('data-name') || '');
+      }
+      return 0;
+    });
+
+    cards.forEach(c => container.appendChild(c));
+    showToast('Diurutkan berdasarkan ' + (val === 'distance' ? 'Jarak Terdekat' : val === 'name' ? 'Nama Kedai' : 'Waktu Ditambahkan'));
+  });
+
+  // Collapsible Guide UI
+  function toggleGuideCard() {
+    const box = document.getElementById('kurasi-detail-box');
+    if (box) box.classList.toggle('hidden');
+  }
+
+  function dismissBanner() {
+    const banner = document.getElementById('kurasi-banner');
+    if (banner) banner.remove();
+  }
+</script>
+
+
+
+
+
+
+
+
+</body></html>
